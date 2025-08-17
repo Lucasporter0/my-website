@@ -2,50 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact – Natural Edge Media</title>
-  <meta name="description" content="Get in touch with Natural Edge Media. We’d love to learn more about your brand and how we can help you grow.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Natural Edge Media — Contact</title>
+  <meta name="description" content="Contact Natural Edge Media for a strategy call and tailored next steps." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Natural Edge Media</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header">
+      <a class="brand" href="index.html">Natural Edge <span>Media</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Why Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a class="btn btn-small active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero small-hero">
-      <h2>Let’s Work Together</h2>
-      <p>We’d love to hear about your brand and how we can help you grow.</p>
-    </section>
+  <section class="section section-cloud">
+    <div class="container narrow">
+      <h1 class="center">Let’s Work Together</h1>
+      <p class="lead center">Tell us about your brand and goals. We’ll reply with tailored next steps.</p>
 
-    <section style="max-width:600px;margin:2rem auto;">
-      <h2>Contact Us</h2>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label for="name">Name</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="_replyto" required><br><br>
-
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-        <button type="submit">Send Message</button>
+      <!-- Replace YOUR_FORM_ID with your Formspree ID -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
       </form>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 Natural Edge Media | All rights reserved</p>
+  <footer class="site-footer">
+    <div class="container footer">
+      <p>© <span id="year"></span> Natural Edge Media</p>
+      <nav aria-label="Footer">
+        <a href="services.html">Services</a> · <a href="portfolio.html">Portfolio</a>
+      </nav>
+    </div>
   </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
