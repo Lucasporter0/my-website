@@ -2,39 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About – Natural Edge Media</title>
-  <meta name="description" content="Learn about Natural Edge Media and our mission to deliver authentic, data-driven marketing for eco-conscious brands.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Natural Edge Media — Why Us</title>
+  <meta name="description" content="Why brands choose Natural Edge Media: research-backed strategy, minimal modern design, and SEO that compounds." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>About Us</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header">
+      <a class="brand" href="index.html">Natural Edge <span>Media</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="about.html">Why Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a class="btn btn-small" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Who We Are</h2>
-      <p>At Natural Edge Media, we’re passionate about helping eco-conscious brands and creators share their stories through authentic marketing.</p>
-    </section>
+  <section class="section section-sand">
+    <div class="container grid-2">
+      <div class="prose">
+        <h1>Why Natural Edge?</h1>
+        <p>Marketing should feel like an extension of your values—never a gimmick. We build long-term growth engines with strategy, storytelling, and design that respect your audience.</p>
+        <ul class="checks">
+          <li><strong>Research-backed strategy</strong> tailored to your stage</li>
+          <li><strong>Minimal, modern design</strong> in calming earth tones</li>
+          <li><strong>SEO foundations</strong> that compound month over month</li>
+        </ul>
+      </div>
+      <figure class="figure">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Forest valley at golden hour">
+      </figure>
+    </div>
+  </section>
 
-    <section>
-      <h2>Our Mission</h2>
-      <p>To replace pushy marketing with strategies that build real trust, community, and measurable growth.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Natural Edge Media | All rights reserved</p>
+  <footer class="site-footer">
+    <div class="container footer">
+      <p>© <span id="year"></span> Natural Edge Media</p>
+      <nav aria-label="Footer">
+        <a href="services.html">Services</a> · <a href="portfolio.html">Portfolio</a> · <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
