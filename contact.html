@@ -3,37 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact – My Awesome Site</title>
-  <meta name="description" content="Get in touch with us today. We'd love to hear from you.">
+  <title>Contact – Natural Edge Media</title>
+  <meta name="description" content="Get in touch with Natural Edge Media. We’d love to learn more about your brand and how we can help you grow.">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Contact</h1>
+    <h1>Natural Edge Media</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Get in Touch</h2>
-      <form>
-        <label>Name:<br><input type="text" name="name" required></label><br>
-        <label>Email:<br><input type="email" name="email" required></label><br>
-        <label>Message:<br><textarea name="message" rows="5" required></textarea></label><br>
-        <button type="submit">Send</button>
+    <section class="hero small-hero">
+      <h2>Let’s Work Together</h2>
+      <p>We’d love to hear about your brand and how we can help you grow.</p>
+    </section>
+
+    <section style="max-width:600px;margin:2rem auto;">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="_replyto" required><br><br>
+
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 My Awesome Site | All rights reserved</p>
+    <p>© 2025 Natural Edge Media | All rights reserved</p>
   </footer>
 </body>
 </html>
