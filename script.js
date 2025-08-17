@@ -23,3 +23,4 @@ document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
 
 // Current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
+
