@@ -1,67 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Natural Edge Media – Authentic Growth for Eco-Conscious Brands</title>
-  <meta name="description" content="Natural Edge Media helps eco-conscious brands grow authentically with SEO, social media, and content strategies.">
+  <meta name="description" content="Natural Edge Media helps eco-conscious brands grow with authentic, data-driven marketing: SEO content, social growth, email flows, and full-funnel strategy." />
+  <link rel="canonical" href="https://naturaledgemedia.vercel.app/" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
-  <!-- Open Graph -->
+
+  <!-- Favicons (optional: replace with your own) -->
+  <link rel="icon" href="https://fav.farm/🌿" />
+  <meta name="theme-color" content="#2c3e50" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Natural Edge Media – Authentic Growth" />
-  <meta property="og:description" content="Eco-conscious content marketing for brands that want to grow authentically." />
-  <meta property="og:image" content="https://source.unsplash.com/1600x900/?nature,eco,marketing" />
+  <meta property="og:description" content="Eco-conscious content marketing that feels natural, not forced." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1600&auto=format&fit=crop" />
   <meta property="og:url" content="https://naturaledgemedia.vercel.app/" />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Natural Edge Media",
+    "url": "https://naturaledgemedia.vercel.app/",
+    "description": "Authentic, data-driven marketing for eco-conscious brands.",
+    "sameAs": [
+      "https://instagram.com/yourhandle",
+      "https://www.linkedin.com/company/yourcompany"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "hello@yoursite.com"
+    }]
+  }
+  </script>
 </head>
 <body>
-  <!-- NAVIGATION -->
-  <header>
-    <h1>Natural Edge Media</h1>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#hero">Skip to content</a>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- Replace text with a logo image later if you want -->
+        <a href="#hero" class="logo">Natural Edge <span>Media</span></a>
+      </div>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact" class="btn btn-small">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="hero" class="hero">
-    <h2>Authentic Growth for Eco-Conscious Brands</h2>
-    <p>We empower brands, creatives, and entrepreneurs with data-driven marketing that feels natural, not forced.</p>
-    <a class="button" href="#services">Explore Our Services</a>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>At Natural Edge Media, we believe marketing should feel like an extension of your brand’s values—not a gimmick.  
-    We help eco-conscious brands grow authentically through strategies built on trust, community, and sustainability.</p>
-  </section>
-
-  <!-- SERVICES SECTION -->
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service-card">
-      <h3>SEO Boost</h3>
-      <p>4 keyword-optimized blog posts per month that drive organic traffic and build long-term visibility.</p>
-    </div>
-    <div class="service-card">
-      <h3>Social Growth</h3>
-      <p>12 social posts per month designed to engage your audience and grow your community.</p>
-    </div>
-    <div class="service-card">
-      <h3>Email Flow</h3>
-      <p>Automated email sequences or newsletters to nurture leads and build customer loyalty.</p>
-    </div>
-    <div class="service-card">
-      <h3>Full Funnel Strategy</h3>
-      <p>A complete package combining SEO, social, and email—your all-in-one growth system.</p>
+  <!-- HERO -->
+  <section id="hero" class="section hero">
+    <div class="overlay"></div>
+    <div class="container hero-inner reveal">
+      <h1>Authentic Growth for Eco-Conscious Brands</h1>
+      <p>We help purpose-driven companies grow with content that’s strategic, sustainable, and human.</p>
+      <div class="cta-row">
+        <a href="#services" class="btn">Explore Services</a>
+        <a href="#contact" class="btn btn-ghost">Get a Strategy Call</a>
+      </div>
     </div>
   </section>
 
-  <!-- PORTFOLIO SECTION -->
-  <section id="por
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="container grid-2 reveal">
+      <div>
+        <h2>Why Natural Edge?</h2>
+        <p>
+          We believe marketing should feel like an extension of your values—never a gimmick. Our approach blends
+          <strong>research-driven strategy</strong> with <strong>clean creative</strong> so your brand earns attention naturally.
+        </p>
+        <ul class="checks">
+          <li>Data-driven strategy that respects your audience</li>
+          <li>Earth-tone aesthetic and minimal, modern design</li>
+          <li>Built-in SEO to compound long-term growth</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Calm nature scene representing sustainable growth" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2 class="reveal">Services</h2>
+      <p class="lead reveal">No pricing here—just outcomes. Choose what fits your stage; we’ll tailor the plan.</p>
+
+      <div class="cards">
+        <article class="card reveal">
+          <h3>SEO Boost</h3>
+          <p><strong>What it is:</strong> Keyword research + 4 optimized articles per month to grow organic traffic.</p>
+          <p><strong>Example:</strong> Rank for “eco-friendly streetwear” with content that converts.</p>
+        </article>
+
+        <article class="card reveal">
+          <h3>Social Growth</h3>
+          <p><strong>What it is:</strong> 12 on-brand posts/month (Reels, carousels, stories) + calendar + captions.</p>
+          <p><strong>Example:</strong> Local coffee shop doubles IG reach with value-first Reels and UGC.</p>
+        </article>
+
+        <article class="card reveal">
+          <h3>Email Flow</h3>
+          <p><strong>What it is:</strong> Welcome, nurture, or promo sequences + monthly newsletter.</p>
+          <p><strong>Example:</strong> Wellness brand turns subscribers into customers with a 5-email welcome series.</p>
+        </article>
+
+        <article class="card reveal">
+          <h3>Full-Funnel Strategy</h3>
+          <p><strong>What it is:</strong> Cohesive plan across SEO, social, and email with monthly reporting.</p>
+          <p><strong>Example:</strong> DTC skincare scales from local to national with an integrated content engine.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section portfolio">
+    <div class="container reveal">
+      <h2>Portfolio</h2>
+      <p class="lead">A few aesthetics that guide our work (swap with your case studies when ready).</p>
+      <div class="masonry">
+        <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=1200&auto=format&fit=crop" alt="Minimal workspace" />
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Leaf texture symbolizing sustainability" />
+        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1200&auto=format&fit=crop" alt="Creative team planning content" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container grid-2">
+      <div class="reveal">
+        <h2>Let’s Work Together</h2>
+        <p class="lead">Tell us about your brand and goals. We’ll reply with a few tailored next steps.</p>
+        <ul class="contact-list">
+          <li><a href="mailto:hello@yoursite.com">hello@yoursite.com</a></li>
+          <li><a href="tel:+12695550123">+1 (269) 555-0123</a></li>
+          <li>Kalamazoo, MI</li>
+        </ul>
+      </div>
+
+      <form class="reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" autocomplete="name" required />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" name="_replyto" autocomplete="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p class="form-note">By submitting, you agree to be contacted about services. No spam—ever.</p>
+      </form>
+    </div>
+  </section>
