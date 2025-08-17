@@ -1,74 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Natural Edge Media</title>
-  <meta name="description" content="Natural Edge Media helps eco-conscious brands thrive with authentic marketing strategies, creative storytelling, and sustainable growth." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Natural Edge Media – Authentic Growth for Eco-Conscious Brands</title>
+  <meta name="description" content="Natural Edge Media helps eco-conscious brands grow with research-driven strategy, clean creative, and sustainable content across SEO, social, email, and full-funnel systems.">
+
+  <!-- Styles (inline so you can paste a single file) -->
+  <style>
+    /* ---------- Tokens (earth tones) ---------- */
+    :root{
+      --ink:#222;
+      --stone:#2d2a26;   /* header/footer */
+      --brown:#6b4226;   /* primary CTA */
+      --brown-2:#5a351f;
+      --green:#2d6a4f;   /* secondary CTA */
+      --green-2:#255740;
+      --sand:#f5f0e6;    /* section bg */
+      --wheat:#e6dfd6;   /* section bg alt */
+      --wheat-2:#faf7f2; /* subtle alt */
+      --cloud:#f1f1f1;   /* light gray */
+      --white:#fff;
+      --shadow:0 8px 24px rgba(0,0,0,.08);
+      --shadow-sm:0 4px 14px rgba(0,0,0,.06);
+    }
+    *{box-sizing:border-box} html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink); line-height:1.7; background:#faf8f4; scroll-behavior:smooth;
+    }
+    a{text-decoration:none;color:inherit}
+
+    /* ---------- Header / Nav ---------- */
+    header{
+      position:sticky; top:0; z-index:1000; background:var(--stone); color:#fff;
+      box-shadow:0 2px 12px rgba(0,0,0,.15);
+    }
+    .bar{max-width:1100px;margin:auto;padding:.9rem 1rem;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:800;letter-spacing:.2px}
+    nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+    nav a{color:#fff;padding:.35rem .6rem;border-radius:.4rem}
+    nav a:hover{background:rgba(255,255,255,.12)}
+    .btn-small{background:#ffffff1a;border:2px solid #ffffff33}
+
+    /* ---------- Sections ---------- */
+    .section{padding:72px 16px} .container{max-width:1100px;margin:auto}
+
+    /* ---------- Buttons ---------- */
+    .btn{
+      display:inline-block;padding:.75rem 1.1rem;border-radius:.65rem;background:var(--brown);color:#fff;font-weight:700;
+      box-shadow:var(--shadow);transition:transform .06s ease, background .2s ease
+    }
+    .btn:hover{background:var(--brown-2);transform:translateY(-1px)}
+    .btn-outline{background:transparent;color:var(--brown);border:2px solid var(--brown)}
+    .btn-outline:hover{background:#f3ebe1}
+    .btn-green{background:var(--green)} .btn-green:hover{background:var(--green-2)}
+    .btn-chip{
+      display:inline-block; padding:.35rem .6rem; border-radius:999px;
+      background:#ffffff; border:1px solid #e6e1da; color:#3b332c; font-size:.85rem;
+    }
+
+    /* ---------- Hero (readable text) ---------- */
+    .hero{
+      position:relative;height:88vh;display:grid;place-items:center;text-align:center;color:#fff;
+      background:url('https://images.unsplash.com/photo-1501785888041-afdab827c52f?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+    }
+    .hero::before{
+      content:"";position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.52), rgba(0,0,0,.38));
+    }
+    .hero-inner{position:relative;max-width:780px;padding:24px}
+    .hero h1{font-size:clamp(2.1rem,4vw,3.2rem);margin:0 0 .65rem;text-shadow:0 3px 12px rgba(0,0,0,.6)}
+    .hero p{font-size:1.15rem;margin:0 auto 1.25rem;line-height:1.65;text-shadow:0 2px 8px rgba(0,0,0,.55);max-width:70ch}
+    .cta-row{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem}
+
+    /* ---------- Why Us ---------- */
+    .why{background:var(--sand)}
+    .why h2{margin:0 0 .5rem;font-size:2rem}
+    .why .lead{opacity:.95;margin:0 auto 1.5rem;max-width:64ch}
+    .grid-2{display:grid;gap:1.5rem;grid-template-columns:1.15fr .85fr}
+    @media (max-width: 900px){.grid-2{grid-template-columns:1fr}}
+    .checks{list-style:none;padding:0;margin:1rem 0 0}
+    .checks li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .checks li::before{content:"✔";position:absolute;left:0;color:var(--green);font-weight:900}
+    .about-card{border-radius:1rem;overflow:hidden;box-shadow:var(--shadow)}
+    .about-card img{width:100%;height:auto;display:block}
+
+    /* ---------- Services (cards with images + CTAs) ---------- */
+    .services{background:var(--wheat);text-align:center}
+    .services h2{margin:0 0 .35rem;font-size:2rem}
+    .services .sub{max-width:62ch;margin:.25rem auto 1.5rem;color:#463f37}
+    .services-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{
+      background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);text-align:left;display:flex;flex-direction:column
+    }
+    .card img{width:100%;height:180px;object-fit:cover}
+    .card-body{padding:1.1rem}
+    .card h3{margin:.1rem 0 .4rem;color:#6b4226;font-size:1.25rem}
+    .card p{margin:.35rem 0;color:#3a342f}
+    .bullets{list-style:none;padding:0;margin:.35rem 0 1rem}
+    .bullets li{position:relative;padding-left:1.1rem;margin:.3rem 0}
+    .bullets li::before{content:"•";position:absolute;left:0;color:var(--green);font-weight:900}
+    .card-ctas{display:flex;gap:.5rem;flex-wrap:wrap}
+
+    /* ---------- Portfolio (sample case studies) ---------- */
+    .portfolio{background:var(--wheat-2)}
+    .portfolio h2{margin:0 0 .35rem;font-size:2rem;text-align:center}
+    .portfolio .sub{max-width:64ch;margin:.25rem auto 2rem;text-align:center;color:#463f37}
+    .pf-grid{display:grid;gap:1.2rem;grid-template-columns:repeat(3,1fr)}
+    @media (max-width: 900px){.pf-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width: 600px){.pf-grid{grid-template-columns:1fr}}
+    .pf-card{
+      background:var(--white); border-radius:14px; overflow:hidden; box-shadow:var(--shadow-sm);
+      display:flex; flex-direction:column;
+    }
+    .pf-card img{width:100%;height:190px;object-fit:cover}
+    .pf-body{padding:1rem 1rem 1.1rem}
+    .pf-title{margin:.1rem 0 .25rem; font-weight:800; color:#2e2924}
+    .pf-meta{font-size:.92rem; color:#5a524a; margin-bottom:.55rem}
+    .pf-tags{display:flex; flex-wrap:wrap; gap:.35rem; margin-bottom:.7rem}
+    .pf-stats{display:flex; gap:.5rem; flex-wrap:wrap; margin:.5rem 0 1rem}
+    .stat{background:#eef4ef; color:#214d3d; border:1px solid #d9e6df; border-radius:8px; padding:.35rem .5rem; font-weight:700; font-size:.9rem}
+    .pf-ctas{display:flex; gap:.5rem; flex-wrap:wrap}
+    .pf-card .btn{box-shadow:none}
+
+    /* ---------- Contact ---------- */
+    .contact{background:var(--cloud);text-align:center}
+    form{max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:.9rem;background:#fff;padding:1.1rem;border-radius:.9rem;box-shadow:var(--shadow)}
+    input,textarea{width:100%;padding:.9rem;border:1px solid #d7d7d7;border-radius:.65rem;font-size:1rem}
+    input:focus,textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(45,106,79,.14)}
+
+    /* ---------- Footer ---------- */
+    footer{background:var(--stone);color:#fff}
+    .foot{max-width:1100px;margin:auto;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    footer a{color:#fff;opacity:.9} footer a:hover{opacity:1}
+  </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
+  <!-- Header / Nav -->
+  <header>
+    <div class="bar">
+      <div class="logo">Natural Edge Media</div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a class="btn btn-small" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO (overlay for readable text) -->
   <section id="hero" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
+    <div class="hero-inner">
       <h1>Marketing That Feels Natural</h1>
       <p>
-        We blend <strong>research-driven strategy</strong> with 
-        <strong>clean, creative</strong> and sustainable growth practices to help 
-        your brand thrive authentically.
+        We blend <strong>research-driven strategy</strong> with <strong>clean creative</strong> and
+        sustainable growth practices to help your brand thrive authentically.
       </p>
-      <a href="#contact" class="hero-button">Get in Touch</a>
+      <div class="cta-row">
+        <a href="#services" class="btn">Explore Services</a>
+        <a href="#contact" class="btn btn-outline">Get a Strategy Call</a>
+      </div>
     </div>
   </section>
 
-  <!-- Why Us Section -->
-  <section id="whyus" class="whyus">
-    <h2>Why Natural Edge?</h2>
-    <p>
-      At Natural Edge Media, we believe in <strong>authentic growth</strong>. 
-      We don’t rely on spammy tactics or quick fixes — we create strategies 
-      that feel natural, connect deeply with your audience, and reflect your 
-      brand’s values.
-    </p>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service">
-      <h3>SEO Boost</h3>
-      <p>Optimized blog content and search strategies that drive organic traffic and visibility for your brand.</p>
-      <p><em>Example: A client saw 200% growth in monthly traffic in just 6 months.</em></p>
-    </div>
-    <div class="service">
-      <h3>Social Growth</h3>
-      <p>Custom social media campaigns designed to build community, increase reach, and boost engagement.</p>
-      <p><em>Example: Instagram following doubled through targeted, authentic storytelling.</em></p>
-    </div>
-    <div class="service">
-      <h3>Email Flow</h3>
-      <p>Engaging email campaigns and automated flows that nurture leads and build customer loyalty.</p>
-      <p><em>Example: Automated welcome series increased conversions by 35%.</em></p>
-    </div>
-    <div class="service">
-      <h3>Full Funnel</h3>
-      <p>A complete solution that ties SEO, social, and email together into one powerful growth engine.</p>
-      <p><em>Example: Client achieved consistent 5x ROI within 3 months.</em></p>
+  <!-- WHY US -->
+  <section id="why" class="section why">
+    <div class="container grid-2">
+      <div>
+        <h2>Why Natural Edge?</h2>
+        <p class="lead">
+          Marketing should feel like an extension of your values—never a gimmick.
+          We pair strategy, storytelling, and design to create long-term growth engines.
+        </p>
+        <ul class="checks">
+          <li><strong>Research-backed strategy</strong> tailored to your audience</li>
+          <li><strong>Minimal, modern design</strong> with calming earth-tone visuals</li>
+          <li><strong>SEO foundations</strong> that compound month over month</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <img src="https://images.unsplash.com/photo-1558981359-219d6364c9c8?q=80&w=1600&auto=format&fit=crop" alt="Nature road symbolizing clear direction">
+      </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <!-- SERVICES (with images, CTAs, and Full Funnel) -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p class="sub">Choose the lane that fits your stage — we’ll tailor the plan to your goals.</p>
+
+      <div class="services-grid">
+        <!-- SEO Boost -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=1600&auto=format&fit=crop" alt="SEO analytics dashboard on a laptop">
+          <div class="card-body">
+            <h3>SEO Boost</h3>
+            <p>Keyword research + optimized articles to build long-term organic traffic and search visibility.</p>
+            <ul class="bullets">
+              <li>4 keyword-focused blog posts per month</li>
+              <li>On-page SEO (titles, meta, internal links)</li>
+              <li>Content briefs + editorial calendar</li>
+            </ul>
+            <div class="card-ctas">
+              <a href="#portfolio" class="btn">See examples</a>
+              <a href="#contact" class="btn btn-outline">Get a strategy call</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Social Growth -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop" alt="Team planning social media content">
+          <div class="card-body">
+            <h3>Social Growth</h3>
+            <p>On-brand content that builds community and reach across Instagram, TikTok, and LinkedIn.</p>
+            <ul class="bullets">
+              <li>12 posts per month (Reels, carousels, or static)</li>
+              <li>Captions, hooks, and content calendar</li>
+              <li>Light community engagement guidance</li>
+            </ul>
+            <div class="card-ctas">
+              <a href="#portfolio" class="btn">See examples</a>
+              <a href="#contact" class="btn btn-outline">Get a strategy call</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Email Flows -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop" alt="Drafting email campaigns on a laptop">
+          <div class="card-body">
+            <h3>Email Flows</h3>
+            <p>Automated sequences and newsletters that turn subscribers into buyers without being pushy.</p>
+            <ul class="bullets">
+              <li>Welcome, nurture, promo, or re-engagement flows</li>
+              <li>Copywriting + light design in your ESP</li>
+              <li>Deliverability & list hygiene basics</li>
+            </ul>
+            <div class="card-ctas">
+              <a href="#portfolio" class="btn">See examples</a>
+              <a href="#contact" class="btn btn-outline">Get a strategy call</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Full Funnel (NEW) -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop" alt="Forest canopy symbolizing cohesive funnel">
+          <div class="card-body">
+            <h3>Full Funnel Strategy</h3>
+            <p>An integrated engine across SEO, social, and email — aligned to your goals with monthly reporting.</p>
+            <ul class="bullets">
+              <li>Unified content plan across channels</li>
+              <li>Top/Mid/Bottom-funnel mapping & offers</li>
+              <li>Monthly performance review + next steps</li>
+            </ul>
+            <div class="card-ctas">
+              <a href="#portfolio" class="btn">See examples</a>
+              <a href="#contact" class="btn btn-green">Build my funnel</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
+  <!-- PORTFOLIO (Sample case studies you can replace later) -->
+  <section id="portfolio" class="section portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <p class="sub">A few sample case studies to show the style, structure, and results you can showcase.</p>
+
+      <div class="pf-grid">
+        <!-- Case Study 1 -->
+        <article class="pf-card">
+          <img src="https://images.unsplash.com/photo-1520975922284-4933b0c6a957?q=80&w=1600&auto=format&fit=crop" alt="Eco fashion brand studio">
+          <div class="pf-body">
+            <div class="pf-title">EcoWear — Organic Apparel</div>
+            <div class="pf-meta">Industry: Sustainable Fashion</div>
+            <div class="pf-tags">
+              <span class="btn-chip">SEO</span>
+              <span class="btn-chip">Content</span>
+              <span class="btn-chip">On-page</span>
+            </div>
+            <div class="pf-stats">
+              <span class="stat">+128% Organic Traffic</span>
+              <span class="stat">12 New Keywords Top 3</span>
+            </div>
+            <div class="pf-ctas">
+              <a href="#contact" class="btn">Read case study</a>
+              <a href="#contact" class="btn btn-outline">Get a similar plan</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 2 -->
+        <article class="pf-card">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop" alt="Cafe social content creation">
+          <div class="pf-body">
+            <div class="pf-title">Trailhead Café — Local Coffee</div>
+            <div class="pf-meta">Industry: Food & Beverage</div>
+            <div class="pf-tags">
+              <span class="btn-chip">Social</span>
+              <span class="btn-chip">UGC</span>
+              <span class="btn-chip">Short-form Video</span>
+            </div>
+            <div class="pf-stats">
+              <span class="stat">3× IG Reach</span>
+              <span class="stat">+64% Saves</span>
+            </div>
+            <div class="pf-ctas">
+              <a href="#contact" class="btn">Read case study</a>
+              <a href="#contact" class="btn btn-outline">Plan my social</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 3 -->
+        <article class="pf-card">
+          <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=1600&auto=format&fit=crop" alt="Minimal desk and laptop">
+          <div class="pf-body">
+            <div class="pf-title">GreenDesk — B2B SaaS</div>
+            <div class="pf-meta">Industry: Productivity Software</div>
+            <div class="pf-tags">
+              <span class="btn-chip">Email</span>
+              <span class="btn-chip">Lifecycle</span>
+              <span class="btn-chip">CRM</span>
+            </div>
+            <div class="pf-stats">
+              <span class="stat">+35% Trial→Paid</span>
+              <span class="stat">+22% Open Rate</span>
+            </div>
+            <div class="pf-ctas">
+              <a href="#contact" class="btn">Read case study</a>
+              <a href="#contact" class="btn btn-outline">Audit my flows</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 4 -->
+        <article class="pf-card">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop" alt="Forest canopy aerial">
+          <div class="pf-body">
+            <div class="pf-title">PureSkin — DTC Skincare</div>
+            <div class="pf-meta">Industry: Beauty & Wellness</div>
+            <div class="pf-tags">
+              <span class="btn-chip">Full Funnel</span>
+              <span class="btn-chip">SEO</span>
+              <span class="btn-chip">Email</span>
+            </div>
+            <div class="pf-stats">
+              <span class="stat">+5× Blended ROAS</span>
+              <span class="stat">+78% Repeat Purchases</span>
+            </div>
+            <div class="pf-ctas">
+              <a href="#contact" class="btn">Read case study</a>
+              <a href="#contact" class="btn btn-outline">Build my funnel</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 5 -->
+        <article class="pf-card">
+          <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1600&auto=format&fit=crop" alt="Team workshop whiteboard session">
+          <div class="pf-body">
+            <div class="pf-title">Cedar Homes — Eco Builders</div>
+            <div class="pf-meta">Industry: Sustainable Construction</div>
+            <div class="pf-tags">
+              <span class="btn-chip">Local SEO</span>
+              <span class="btn-chip">Content</span>
+              <span class="btn-chip">CRO</span>
+            </div>
+            <div class="pf-stats">
+              <span class="stat">+212% Organic Leads</span>
+              <span class="stat">+28% Contact Form CVR</span>
+            </div>
+            <div class="pf-ctas">
+              <a href="#contact" class="btn">Read case study</a>
+              <a href="#contact" class="btn btn-outline">Local SEO plan</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 6 -->
+        <article class="pf-card">
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop" alt="Leaf macro texture">
+          <div class="pf-body">
+            <div class="pf-title">BloomCo — Wellness Brand</div>
+            <div class="pf-meta">Industry: Health & Wellness</div>
+            <div class="pf-tags">
+              <span class="btn-chip">Social</span>
+              <span class="btn-chip">Email</span>
+              <span class="btn-chip">UGC</span>
+            </div>
+            <div class="pf-stats">
+              <span class="stat">+41% LTV</span>
+              <span class="stat">+2.3× Monthly Revenue</span>
+            </div>
+            <div class="pf-ctas">
+              <a href="#contact" class="btn">Read case study</a>
+              <a href="#contact" class="btn btn-outline">Start a pilot</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Let’s Work Together</h2>
+      <p class="sub">Tell us about your brand and goals. We’ll reply with a few tailored next steps.</p>
+
+      <!-- Connect this to Formspree (replace YOUR_FORM_ID) -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot">
+      <p>© <span id="year"></span> Natural Edge Media — Authentic marketing for eco-conscious brands.</p>
+      <nav aria-label="Footer">
+        <a href="#hero">Home</a> · <a href="#services">Services</a> · <a href="#portfolio">Portfolio</a> · <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Tiny inline script for the year -->
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
