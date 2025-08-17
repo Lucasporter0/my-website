@@ -2,34 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Natural Edge Media</title>
-  <meta name="description" content="See examples of Natural Edge Media's work with eco-conscious brands and creative entrepreneurs.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Natural Edge Media — Portfolio</title>
+  <meta name="description" content="Sample case studies from Natural Edge Media to showcase style, structure, and outcomes." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header">
+      <a class="brand" href="index.html">Natural Edge <span>Media</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Why Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a class="active" href="portfolio.html">Portfolio</a></li>
+          <li><a class="btn btn-small" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Case Studies Coming Soon</h2>
-      <p>We’re working on showcasing our latest client success stories. Check back soon!</p>
-    </section>
-  </main>
+  <section class="section section-cream">
+    <div class="container">
+      <h1 class="center">Portfolio</h1>
+      <p class="lead center">Realistic sample layouts you can replace with client work and metrics.</p>
 
-  <footer>
-    <p>© 2025 Natural Edge Media | All rights reserved</p>
+      <div class="pf-grid">
+        <article class="pf">
+          <img src="https://images.unsplash.com/photo-1520975922284-4933b0c6a957?q=80&w=1600&auto=format&fit=crop" alt="Eco fashion studio" />
+          <div class="pf-body">
+            <h3>EcoWear — Organic Apparel</h3>
+            <p class="meta">Sustainable Fashion · SEO + Content</p>
+            <p class="stats"><strong>+128%</strong> organic traffic · <strong>12</strong> keywords top-3</p>
+            <a href="contact.html" class="btn btn-outline">Read case study</a>
+          </div>
+        </article>
+
+        <article class="pf">
+          <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=1600&auto=format&fit=crop" alt="Minimal workspace" />
+          <div class="pf-body">
+            <h3>GreenDesk — B2B SaaS</h3>
+            <p class="meta">Productivity · Email Lifecycle</p>
+            <p class="stats"><strong>+35%</strong> trial→paid · <strong>+22%</strong> open rate</p>
+            <a href="contact.html" class="btn btn-outline">Read case study</a>
+          </div>
+        </article>
+
+        <article class="pf">
+          <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1600&auto=format&fit=crop" alt="Workshop" />
+          <div class="pf-body">
+            <h3>PureSkin — DTC Skincare</h3>
+            <p class="meta">Beauty & Wellness · Full-Funnel</p>
+            <p class="stats"><strong>5×</strong> blended ROAS · <strong>+78%</strong> repeat</p>
+            <a href="contact.html" class="btn btn-outline">Read case study</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer">
+      <p>© <span id="year"></span> Natural Edge Media</p>
+      <nav aria-label="Footer">
+        <a href="services.html">Services</a> · <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
