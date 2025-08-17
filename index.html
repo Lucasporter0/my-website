@@ -7,13 +7,12 @@
   <title>Natural Edge Media – Authentic Growth for Eco-Conscious Brands</title>
   <meta name="description" content="Natural Edge Media helps eco-conscious brands grow with authentic, data-driven marketing: SEO content, social growth, email flows, and full-funnel strategy." />
   <link rel="canonical" href="https://naturaledgemedia.vercel.app/" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Favicons (optional: replace with your own) -->
   <link rel="icon" href="https://fav.farm/🌿" />
   <meta name="theme-color" content="#2c3e50" />
+
+  <!-- Make animations progressive: only hide if JS is available -->
+  <script>document.documentElement.classList.add('js');</script>
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
@@ -44,14 +43,11 @@
   </script>
 </head>
 <body>
-  <!-- Skip link for accessibility -->
   <a class="skip-link" href="#hero">Skip to content</a>
 
-  <!-- HEADER / NAV -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <!-- Replace text with a logo image later if you want -->
         <a href="#hero" class="logo">Natural Edge <span>Media</span></a>
       </div>
       <nav aria-label="Primary">
@@ -66,7 +62,6 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section id="hero" class="section hero">
     <div class="overlay"></div>
     <div class="container hero-inner reveal">
@@ -79,7 +74,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about" class="section about">
     <div class="container grid-2 reveal">
       <div>
@@ -100,7 +94,6 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section id="services" class="section services">
     <div class="container">
       <h2 class="reveal">Services</h2>
@@ -134,7 +127,6 @@
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
   <section id="portfolio" class="section portfolio">
     <div class="container reveal">
       <h2>Portfolio</h2>
@@ -147,7 +139,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="section contact">
     <div class="container grid-2">
       <div class="reveal">
@@ -175,3 +166,20 @@
       </form>
     </div>
   </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Natural Edge Media — Authentic marketing for eco-conscious brands.</p>
+      <nav aria-label="Footer">
+        <a href="#hero">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- defer ensures this runs after HTML is parsed -->
+  <script src="script.js" defer></script>
+</body>
+</html>
