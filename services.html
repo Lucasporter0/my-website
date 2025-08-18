@@ -16,7 +16,7 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Styles (cache-busted) -->
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css?v=12" />
 </head>
 <body>
@@ -44,12 +44,14 @@
     </div>
 
     <div class="container cards">
-      <!-- SEO Boost -->
+      <!-- SEO Boost (unchanged) -->
       <div class="card">
         <img
           src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?auto=format&fit=crop&w=1600&q=80"
           alt="Printed analytics reports with charts and SEO KPI graphs"
-          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+          loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer"
+          width="1600" height="1066"
+          sizes="(min-width: 1200px) 20vw, (min-width: 768px) 33vw, 90vw" />
         <div class="card-body">
           <h3>SEO Boost</h3>
           <p>Keyword research + optimized content to grow qualified organic traffic and compound results over time.</p>
@@ -65,12 +67,14 @@
         </div>
       </div>
 
-      <!-- Social Growth -->
+      <!-- Social Growth (NEW IMAGE: content planning & short-form creation) -->
       <div class="card">
         <img
-          src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80"
-          alt="Team planning social content calendar on a whiteboard"
-          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+          src="https://source.unsplash.com/1600x1066/?social%20media,content%20planning,creator,calendar"
+          alt="Creators planning a social content calendar and filming short-form video"
+          loading="lazy" decoding="async" referrerpolicy="no-referrer"
+          width="1600" height="1066"
+          sizes="(min-width: 1200px) 20vw, (min-width: 768px) 33vw, 90vw" />
         <div class="card-body">
           <h3>Social Growth</h3>
           <p>On-brand posts and short-form video that build community and reach without gimmicks.</p>
@@ -86,12 +90,14 @@
         </div>
       </div>
 
-      <!-- Email Flows -->
+      <!-- Email Flows (NEW IMAGE: ESP / automation workflow) -->
       <div class="card">
         <img
-          src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?auto=format&fit=crop&w=1600&q=80"
-          alt="Laptop and workspace used for email marketing content and flows"
-          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+          src="https://source.unsplash.com/1600x1066/?email%20marketing,automation,workflow,newsletter,laptop"
+          alt="Email marketing platform showing automation workflow and newsletter editor"
+          loading="lazy" decoding="async" referrerpolicy="no-referrer"
+          width="1600" height="1066"
+          sizes="(min-width: 1200px) 20vw, (min-width: 768px) 33vw, 90vw" />
         <div class="card-body">
           <h3>Email Flows</h3>
           <p>Lifecycle sequences and newsletters that convert without being pushy—designed to welcome, nurture, and re-engage.</p>
@@ -107,12 +113,14 @@
         </div>
       </div>
 
-      <!-- Advertisements (updated image to match paid media dashboards) -->
+      <!-- Advertisements (NEW IMAGE: paid-media performance dashboard) -->
       <div class="card">
         <img
-          src="https://images.unsplash.com/photo-1554774853-b415df9eeb92?auto=format&fit=crop&w=1600&q=80"
-          alt="Digital ads dashboard with campaign performance graphs on tablet and phone"
-          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+          src="https://source.unsplash.com/1600x1066/?digital%20ads,marketing%20dashboard,ad%20campaign,analytics"
+          alt="Digital advertising dashboard with campaign performance and budgets"
+          loading="lazy" decoding="async" referrerpolicy="no-referrer"
+          width="1600" height="1066"
+          sizes="(min-width: 1200px) 20vw, (min-width: 768px) 33vw, 90vw" />
         <div class="card-body">
           <h3>Advertisements</h3>
           <p>Conversion-focused paid campaigns across Meta, Google, and TikTok—built on strong creative, tight targeting, and clear reporting.</p>
@@ -128,12 +136,14 @@
         </div>
       </div>
 
-      <!-- Full-Funnel Strategy (kept your original image) -->
+      <!-- Full-Funnel Strategy (unchanged) -->
       <div class="card">
         <img
           src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80"
           alt="Laptop with marketing analytics dashboard illustrating full-funnel"
-          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+          loading="lazy" decoding="async" referrerpolicy="no-referrer"
+          width="1600" height="1066"
+          sizes="(min-width: 1200px) 20vw, (min-width: 768px) 33vw, 90vw" />
         <div class="card-body">
           <h3>Full-Funnel Strategy</h3>
           <p>Integrated plan across SEO, social, email, and ads with monthly reporting and iterative improvements.</p>
@@ -161,7 +171,7 @@
     </div>
   </footer>
 
-  <!-- JSON-LD: Breadcrumbs + Services -->
+  <!-- JSON-LD: Breadcrumbs -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -172,51 +182,21 @@
     ]
   }
   </script>
+
+  <!-- JSON-LD: Services -->
   <script type="application/ld+json">
-  [{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "SEO Boost",
-    "provider": { "@type": "Organization", "name": "Natural Edge Media" },
-    "description": "Keyword research and optimized content to increase qualified organic traffic.",
-    "areaServed": "Global",
-    "serviceType": "Search Engine Optimization"
-  },{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Social Growth",
-    "provider": { "@type": "Organization", "name": "Natural Edge Media" },
-    "description": "On-brand social content and short-form video to build community and reach.",
-    "areaServed": "Global",
-    "serviceType": "Social Media Marketing"
-  },{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Email Flows",
-    "provider": { "@type": "Organization", "name": "Natural Edge Media" },
-    "description": "Lifecycle email sequences and newsletters that convert and retain customers.",
-    "areaServed": "Global",
-    "serviceType": "Email Marketing"
-  },{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Advertisements",
-    "provider": { "@type": "Organization", "name": "Natural Edge Media" },
-    "description": "Conversion-focused paid campaigns across Meta, Google, and TikTok with creative testing, audience targeting, and weekly optimization.",
-    "areaServed": "Global",
-    "serviceType": "Digital Advertising"
-  },{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Full-Funnel Strategy",
-    "provider": { "@type": "Organization", "name": "Natural Edge Media" },
-    "description": "Integrated cross-channel growth strategy across SEO, social, email, and ads with ongoing reporting.",
-    "areaServed": "Global",
-    "serviceType": "Marketing Strategy"
-  }]
+  [
+    { "@context": "https://schema.org", "@type": "Service", "name": "SEO Boost", "provider": { "@type": "Organization", "name": "Natural Edge Media" }, "description": "Keyword research and optimized content to increase qualified organic traffic.", "areaServed": "Global", "serviceType": "Search Engine Optimization" },
+    { "@context": "https://schema.org", "@type": "Service", "name": "Social Growth", "provider": { "@type": "Organization", "name": "Natural Edge Media" }, "description": "On-brand social content and short-form video to build community and reach.", "areaServed": "Global", "serviceType": "Social Media Marketing" },
+    { "@context": "https://schema.org", "@type": "Service", "name": "Email Flows", "provider": { "@type": "Organization", "name": "Natural Edge Media" }, "description": "Lifecycle email sequences and newsletters that convert and retain customers.", "areaServed": "Global", "serviceType": "Email Marketing" },
+    { "@context": "https://schema.org", "@type": "Service", "name": "Advertisements", "provider": { "@type": "Organization", "name": "Natural Edge Media" }, "description": "Conversion-focused paid campaigns across Meta, Google, and TikTok with creative testing, audience targeting, and weekly optimization.", "areaServed": "Global", "serviceType": "Digital Advertising" },
+    { "@context": "https://schema.org", "@type": "Service", "name": "Full-Funnel Strategy", "provider": { "@type": "Organization", "name": "Natural Edge Media" }, "description": "Integrated cross-channel growth strategy across SEO, social, email, and ads with ongoing reporting.", "areaServed": "Global", "serviceType": "Marketing Strategy" }
+  ]
   </script>
 
-  <!-- JS -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
   <script src="script.js" defer></script>
 </body>
 </html>
