@@ -4,26 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Services | Natural Edge Media — Simple Plans that Grow Sales</title>
-  <meta name="description" content="Straightforward services that grow your traffic and sales: SEO articles, social posts, email flows, paid ads, and a simple full-funnel plan. No fluff." />
+  <title>Services | Natural Edge Media — Clear Plans, Clear Scope</title>
+  <meta name="description" content="Straightforward services with clear scope: SEO articles, social posts (we provide strategy + captions, no on-site filming), email flows, paid ads, and a simple full-funnel plan." />
   <link rel="canonical" href="https://my-website.vercel.app/services.html" />
 
   <!-- Social / Open Graph -->
   <meta property="og:title" content="Natural Edge Media — Services" />
-  <meta property="og:description" content="Clear, simple services: SEO, social, email, ads, and full-funnel. Built to grow sales without the fluff." />
+  <meta property="og:description" content="What you get, what we need, and what’s not included—for SEO, social, email, ads, and full-funnel strategy." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://my-website.vercel.app/services.html" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css?v=12" />
   <style>
-    .mini { font-size:.95rem; opacity:.8; }
-    .pill { display:inline-block; padding:.15rem .55rem; border:1px solid #e7e0d6; border-radius:9999px; margin-right:.4rem; font-size:.8rem; }
-    .meta { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.75rem; }
-    .card .meta b { font-weight:600; }
+    /* Small helpers to keep things readable */
     .media { border-radius:14px; overflow:hidden; }
+    .mini { font-size:.95rem; opacity:.85; }
+    .pill { display:inline-block; padding:.15rem .55rem; border:1px solid #e7e0d6; border-radius:9999px; margin-right:.4rem; font-size:.8rem; }
+    .meta { display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.6rem; font-size:.95rem; }
+    .scope { margin-top:.75rem; padding:.75rem .9rem; background:#faf7f2; border:1px solid #efe8de; border-radius:10px; }
+    .scope h4 { margin:.15rem 0 .35rem; font-size:1rem; }
+    .scope ul { margin:0; }
+    .muted { opacity:.75; }
+    details { border:1px solid #eee; border-radius:12px; padding:.75rem 1rem; background:#fff; }
+    details+details { margin-top:.6rem; }
   </style>
 </head>
 <body>
@@ -43,12 +48,12 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Intro -->
   <section class="section section-sand">
     <div class="container center narrow">
       <h1>Services</h1>
-      <p class="lead">Simple plans that grow traffic and sales. No jargon. No gimmicks. We do the work and show you the numbers.</p>
-      <div class="mini">
+      <p class="lead">Simple plans. Clear scope. We do the work and show you the numbers—no jargon, no surprises.</p>
+      <div class="mini" style="margin-top:.4rem">
         <span class="pill">SEO</span>
         <span class="pill">Social</span>
         <span class="pill">Email</span>
@@ -63,22 +68,40 @@
     <div class="container cards">
 
       <!-- SEO Boost -->
-      <article class="card">
+      <article class="card" id="seo">
         <img class="media"
              src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?auto=format&fit=crop&w=1600&q=80"
              alt="Laptop with analytics charts" width="1600" height="1066" loading="lazy" decoding="async" />
         <div class="card-body">
           <h3>SEO Boost</h3>
-          <p>We write useful articles that answer what people search for and link them together so Google can find you.</p>
+          <p>We write helpful articles that match what people search for and link them together so Google can find you.</p>
           <ul class="bullets">
             <li>4 new articles each month</li>
-            <li>Titles, headers, links—done right</li>
+            <li>On-page fixes: titles, headers, internal links</li>
             <li>Simple content plan you can see</li>
-            <li>Monthly report: what grew and why</li>
+            <li>Monthly report: what grew, what didn’t, next moves</li>
           </ul>
+
+          <div class="scope">
+            <h4>What you get</h4>
+            <ul class="bullets">
+              <li>Research + briefs, writing, light images</li>
+              <li>Internal linking between posts and key pages</li>
+              <li>Basic schema/FAQ where it helps</li>
+            </ul>
+            <h4>What we need from you</h4>
+            <ul class="bullets">
+              <li>CMS + GA4/GSC access, brand voice/keywords</li>
+            </ul>
+            <h4>Not included</h4>
+            <ul class="bullets">
+              <li>Paid link buying, heavy dev/UX changes</li>
+            </ul>
+          </div>
+
           <div class="meta">
             <span><b>Best for:</b> sites needing steady traffic</span>
-            <span><b>Timeline:</b> 8–12 weeks to lift</span>
+            <span><b>Timeline:</b> first lift in ~8–12 weeks</span>
           </div>
           <div class="actions">
             <a href="portfolio.html#seo" class="btn btn-outline">See examples</a>
@@ -88,22 +111,42 @@
       </article>
 
       <!-- Social Growth -->
-      <article class="card">
+      <article class="card" id="social">
         <img class="media"
              src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1600&q=80"
              alt="Social app icons on blue" width="1600" height="1066" loading="lazy" decoding="async" />
         <div class="card-body">
           <h3>Social Growth</h3>
-          <p>We post clear, on-brand content that people save and share. No trend dancing required.</p>
+          <p>We provide the plan, the posts, and the words. You record simple clips on your phone—we make them work.</p>
           <ul class="bullets">
-            <li>12 posts per month (reels + carousels)</li>
+            <li>12 posts per month (mix of reels + carousels)</li>
             <li>Hooks and captions written for you</li>
             <li>Weekly shot list so filming is easy</li>
-            <li>Light engagement help to keep it moving</li>
+            <li>Light editing of clips you send (≤60s, phone footage)</li>
+            <li>Optional: scheduling in your tool</li>
           </ul>
+
+          <div class="scope">
+            <h4>What you get</h4>
+            <ul class="bullets">
+              <li>Content calendar, copy, basic edits/graphics</li>
+              <li>In-feed comment replies (light)</li>
+            </ul>
+            <h4>What we need from you</h4>
+            <ul class="bullets">
+              <li>Raw clips/photos, product access, brand voice</li>
+            </ul>
+            <h4>Not included</h4>
+            <ul class="bullets">
+              <li><b>No on-site filming</b> or creator/talent sourcing</li>
+              <li><b>No DM inbox management</b> (comments only)</li>
+              <li>Large-scale video production</li>
+            </ul>
+          </div>
+
           <div class="meta">
             <span><b>Best for:</b> brands wanting reach & saves</span>
-            <span><b>Timeline:</b> 4–6 weeks to momentum</span>
+            <span><b>Timeline:</b> momentum in ~4–6 weeks</span>
           </div>
           <div class="actions">
             <a href="portfolio.html#social" class="btn btn-outline">See examples</a>
@@ -113,7 +156,7 @@
       </article>
 
       <!-- Email Flows -->
-      <article class="card">
+      <article class="card" id="email">
         <img class="media"
              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1600&q=80"
              alt="Laptop with email flow diagram" width="1600" height="1066" loading="lazy" decoding="async" />
@@ -121,14 +164,33 @@
           <h3>Email Flows</h3>
           <p>We set up welcome, cart, and win-back emails that sell without being pushy.</p>
           <ul class="bullets">
-            <li>Welcome, browse, cart, and win-back</li>
-            <li>Copy + simple design in your ESP</li>
-            <li>List clean-up so emails land in inboxes</li>
-            <li>Deliverability and revenue tracking</li>
+            <li>Welcome, browse, cart, and win-back sequences</li>
+            <li>Copy + light design built in your ESP (e.g., Klaviyo)</li>
+            <li>List clean-up to improve deliverability/inbox placement</li>
+            <li>SPF/DMARC/DKIM checks if needed</li>
+            <li>A/B tests on subject lines and send times</li>
           </ul>
+
+          <div class="scope">
+            <h4>What you get</h4>
+            <ul class="bullets">
+              <li>Flow maps, segments/exclusions, templates</li>
+              <li>Revenue + deliverability reporting</li>
+            </ul>
+            <h4>What we need from you</h4>
+            <ul class="bullets">
+              <li>ESP access, brand assets, product info</li>
+            </ul>
+            <h4>Not included</h4>
+            <ul class="bullets">
+              <li>Cold email/list buying</li>
+              <li>Heavily custom HTML themes</li>
+            </ul>
+          </div>
+
           <div class="meta">
             <span><b>Best for:</b> stores wanting more repeat orders</span>
-            <span><b>Timeline:</b> 2–4 weeks to go live</span>
+            <span><b>Timeline:</b> live in ~2–4 weeks</span>
           </div>
           <div class="actions">
             <a href="portfolio.html#email" class="btn btn-outline">See examples</a>
@@ -138,7 +200,7 @@
       </article>
 
       <!-- Advertisements -->
-      <article class="card">
+      <article class="card" id="ads">
         <img class="media"
              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80"
              alt="Ads dashboard with charts" width="1600" height="1066" loading="lazy" decoding="async" />
@@ -146,14 +208,33 @@
           <h3>Advertisements</h3>
           <p>We run simple, test-and-learn campaigns on Meta, Google, and TikTok to get new customers at a fair cost.</p>
           <ul class="bullets">
-            <li>Account + pixel/GA4 set-up</li>
-            <li>Creative testing and clean audiences</li>
+            <li>Account + pixel/GA4 setup</li>
+            <li>Creative testing and clean audiences (with exclusions)</li>
             <li>Prospecting + retargeting that make sense</li>
             <li>Weekly tweaks and clear reports</li>
+            <li>Attribution via platform + GA4; CAC/ROAS tracked weekly</li>
           </ul>
+
+          <div class="scope">
+            <h4>What you get</h4>
+            <ul class="bullets">
+              <li>Campaign build, budgets, and optimization logs</li>
+              <li>Winning-creative notes and next tests</li>
+            </ul>
+            <h4>What we need from you</h4>
+            <ul class="bullets">
+              <li>Ad account access, creative/product assets, budget</li>
+            </ul>
+            <h4>Not included</h4>
+            <ul class="bullets">
+              <li>Guaranteed results or influencer sourcing</li>
+              <li>Long-form video production</li>
+            </ul>
+          </div>
+
           <div class="meta">
             <span><b>Best for:</b> brands ready to scale</span>
-            <span><b>Timeline:</b> tests show in 2–4 weeks</span>
+            <span><b>Timeline:</b> first learnings in ~2–4 weeks</span>
           </div>
           <div class="actions">
             <a href="portfolio.html#ads" class="btn btn-outline">See examples</a>
@@ -163,22 +244,38 @@
       </article>
 
       <!-- Full-Funnel Strategy -->
-      <article class="card">
+      <article class="card" id="funnel">
         <img class="media"
              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80"
              alt="Simple planning board with charts" width="1600" height="1066" loading="lazy" decoding="async" />
         <div class="card-body">
           <h3>Full-Funnel Strategy</h3>
-          <p>One clear plan for SEO, social, email, and ads. What to make, what to test, and what to stop.</p>
+          <p>One clear plan for SEO, social, email, and ads—what to make, what to test, and what to stop.</p>
           <ul class="bullets">
-            <li>One content system across channels</li>
+            <li>Content system across SEO/social/email/ads (shared topics, reused assets)</li>
             <li>Top/Mid/Bottom funnel mapped in plain English</li>
             <li>Monthly review: wins, losses, next moves</li>
-            <li>Dashboards you can read at a glance</li>
+            <li>1-page dashboard: traffic, CAC/ROAS, repeat rate</li>
           </ul>
+
+          <div class="scope">
+            <h4>What you get</h4>
+            <ul class="bullets">
+              <li>90-day plan, testing roadmap, reporting template</li>
+            </ul>
+            <h4>What we need from you</h4>
+            <ul class="bullets">
+              <li>Analytics access and recent performance data</li>
+            </ul>
+            <h4>Not included</h4>
+            <ul class="bullets">
+              <li>Channel execution (add any service above to implement)</li>
+            </ul>
+          </div>
+
           <div class="meta">
             <span><b>Best for:</b> teams wanting clarity</span>
-            <span><b>Timeline:</b> 4 weeks for the plan</span>
+            <span><b>Timeline:</b> ~4 weeks for the plan</span>
           </div>
           <div class="actions">
             <a href="portfolio.html#funnel" class="btn btn-outline">See examples</a>
@@ -190,7 +287,7 @@
     </div>
   </section>
 
-  <!-- FAQ (plain English) -->
+  <!-- FAQ & Fine Print -->
   <section class="section section-sand">
     <div class="container narrow">
       <h2>Quick answers</h2>
@@ -200,12 +297,13 @@
       </details>
       <details>
         <summary>How soon will we see results?</summary>
-        <p>Ads: usually 2–4 weeks. Email: 2–4 weeks after flows go live. SEO: 8–12 weeks to see steady lift.</p>
+        <p>Ads: usually 2–4 weeks for first learnings. Email: 2–4 weeks after flows go live. SEO: 8–12 weeks to see steady lift.</p>
       </details>
       <details>
         <summary>What do you need from us?</summary>
-        <p>Access to your tools (analytics, ads, or ESP) and one point of contact for quick approvals.</p>
+        <p>Access to your tools (analytics, ads, or ESP), brand assets, and one point of contact for quick approvals.</p>
       </details>
+      <p class="muted" style="margin-top:.8rem">Results vary by offer, budget, and season. We don’t guarantee placement or performance; we measure, learn, and improve every month.</p>
     </div>
   </section>
 
@@ -219,24 +317,29 @@
     </div>
   </footer>
 
-  <!-- JSON-LD: Services (concise) -->
+  <!-- JSON-LD: concise services -->
   <script type="application/ld+json">
   [{
     "@context":"https://schema.org","@type":"Service","name":"SEO Boost",
-    "serviceType":"Search Engine Optimization",
-    "areaServed":"Global","provider":{"@type":"Organization","name":"Natural Edge Media"}
+    "serviceType":"Search Engine Optimization","areaServed":"Global",
+    "provider":{"@type":"Organization","name":"Natural Edge Media"}
   },{
     "@context":"https://schema.org","@type":"Service","name":"Social Growth",
-    "serviceType":"Social Media Marketing","areaServed":"Global","provider":{"@type":"Organization","name":"Natural Edge Media"}
+    "description":"Strategy, posts, captions, light editing of client-shot clips; no on-site filming.",
+    "serviceType":"Social Media Marketing","areaServed":"Global",
+    "provider":{"@type":"Organization","name":"Natural Edge Media"}
   },{
     "@context":"https://schema.org","@type":"Service","name":"Email Flows",
-    "serviceType":"Email Marketing","areaServed":"Global","provider":{"@type":"Organization","name":"Natural Edge Media"}
+    "serviceType":"Email Marketing","areaServed":"Global",
+    "provider":{"@type":"Organization","name":"Natural Edge Media"}
   },{
     "@context":"https://schema.org","@type":"Service","name":"Advertisements",
-    "serviceType":"Digital Advertising","areaServed":"Global","provider":{"@type":"Organization","name":"Natural Edge Media"}
+    "serviceType":"Digital Advertising","areaServed":"Global",
+    "provider":{"@type":"Organization","name":"Natural Edge Media"}
   },{
     "@context":"https://schema.org","@type":"Service","name":"Full-Funnel Strategy",
-    "serviceType":"Marketing Strategy","areaServed":"Global","provider":{"@type":"Organization","name":"Natural Edge Media"}
+    "serviceType":"Marketing Strategy","areaServed":"Global",
+    "provider":{"@type":"Organization","name":"Natural Edge Media"}
   }]
   </script>
 
