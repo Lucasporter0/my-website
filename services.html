@@ -8,7 +8,7 @@
   <meta name="description" content="Explore Natural Edge Media’s services: SEO content systems, social media growth, lifecycle email flows, and full-funnel marketing strategy designed for sustainable growth." />
   <link rel="canonical" href="https://my-website.vercel.app/services.html" />
 
-  <!-- Social sharing -->
+  <!-- Social / Open Graph -->
   <meta property="og:title" content="Natural Edge Media — Services" />
   <meta property="og:description" content="SEO content systems, social growth, email flows, and full-funnel strategy for sustainable, long-term results." />
   <meta property="og:type" content="website" />
@@ -16,8 +16,8 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Styles (cache-busted) -->
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <!-- Styles (cache-busted so Vercel/CDN serves latest) -->
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
   <!-- Header -->
@@ -47,10 +47,9 @@
       <!-- SEO Boost -->
       <div class="card">
         <img
-          src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop"
-          alt="Analytics dashboard showing SEO performance and organic growth"
-          loading="lazy" referrerpolicy="no-referrer"
-        />
+          src="img/services-seo.jpg"
+          alt="SEO analytics dashboard showing organic traffic growth"
+          loading="lazy" decoding="async" />
         <div class="card-body">
           <h3>SEO Boost</h3>
           <p>Keyword research + optimized content to grow qualified organic traffic and compound results over time.</p>
@@ -60,8 +59,8 @@
             <li>Editorial calendar &amp; briefs</li>
           </ul>
           <div class="actions">
-            <a href="portfolio.html#seo" class="btn btn-outline" aria-label="See SEO case examples">See examples</a>
-            <a href="contact.html" class="btn btn-green" aria-label="Get an SEO plan">Get a plan</a>
+            <a href="portfolio.html#seo" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Get a plan</a>
           </div>
         </div>
       </div>
@@ -69,10 +68,9 @@
       <!-- Social Growth -->
       <div class="card">
         <img
-          src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1200&auto=format&fit=crop"
-          alt="Phone and camera on desk used for social media content planning"
-          loading="lazy" referrerpolicy="no-referrer"
-        />
+          src="img/services-social.jpg"
+          alt="Team planning social media content and short-form video"
+          loading="lazy" decoding="async" />
         <div class="card-body">
           <h3>Social Growth</h3>
           <p>On-brand posts and short-form video that build community and reach without gimmicks.</p>
@@ -82,8 +80,8 @@
             <li>Light engagement guidance</li>
           </ul>
           <div class="actions">
-            <a href="portfolio.html#social" class="btn btn-outline" aria-label="See social growth examples">See examples</a>
-            <a href="contact.html" class="btn btn-green" aria-label="Plan my social strategy">Plan my social</a>
+            <a href="portfolio.html#social" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Plan my social</a>
           </div>
         </div>
       </div>
@@ -91,10 +89,9 @@
       <!-- Email Flows -->
       <div class="card">
         <img
-          src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?q=80&w=1200&auto=format&fit=crop"
-          alt="Team collaborating on lifecycle email flows"
-          loading="lazy" referrerpolicy="no-referrer"
-        />
+          src="img/services-email.jpg"
+          alt="Marketing team collaborating on lifecycle email flow designs"
+          loading="lazy" decoding="async" />
         <div class="card-body">
           <h3>Email Flows</h3>
           <p>Lifecycle sequences and newsletters that convert without being pushy—designed to welcome, nurture, and re-engage.</p>
@@ -104,8 +101,8 @@
             <li>Deliverability hygiene</li>
           </ul>
           <div class="actions">
-            <a href="portfolio.html#email" class="btn btn-outline" aria-label="Read email flow samples">See examples</a>
-            <a href="contact.html" class="btn btn-green" aria-label="Request an email flow audit">Audit my flows</a>
+            <a href="portfolio.html#email" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Audit my flows</a>
           </div>
         </div>
       </div>
@@ -113,10 +110,9 @@
       <!-- Full-Funnel Strategy -->
       <div class="card">
         <img
-          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+          src="img/services-funnel.jpg"
           alt="Laptop with marketing analytics dashboard illustrating full-funnel"
-          loading="lazy" referrerpolicy="no-referrer"
-        />
+          loading="lazy" decoding="async" />
         <div class="card-body">
           <h3>Full-Funnel Strategy</h3>
           <p>Integrated plan across SEO, social, and email with monthly reporting and iterative improvements.</p>
@@ -126,8 +122,8 @@
             <li>Monthly review &amp; next steps</li>
           </ul>
           <div class="actions">
-            <a href="portfolio.html#funnel" class="btn btn-outline" aria-label="See full-funnel case examples">See examples</a>
-            <a href="contact.html" class="btn btn-green" aria-label="Start a full-funnel project">Build my funnel</a>
+            <a href="portfolio.html#funnel" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Build my funnel</a>
           </div>
         </div>
       </div>
@@ -144,7 +140,7 @@
     </div>
   </footer>
 
-  <!-- JSON-LD -->
+  <!-- JSON-LD: Breadcrumbs + Services -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -191,6 +187,7 @@
   }]
   </script>
 
+  <!-- JS: footer year + your small enhancements -->
   <script src="script.js" defer></script>
 </body>
 </html>
