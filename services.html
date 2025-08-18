@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Services | Natural Edge Media — SEO, Social Growth, Email & Full-Funnel Strategy</title>
-  <meta name="description" content="Explore Natural Edge Media’s services: SEO content systems, social media growth, lifecycle email flows, and full-funnel marketing strategy designed for sustainable growth." />
+  <title>Services | Natural Edge Media — SEO, Social, Email, Ads & Full-Funnel Strategy</title>
+  <meta name="description" content="Natural Edge Media services: SEO content systems, social media growth, lifecycle email flows, paid advertisements, and full-funnel strategy for sustainable growth." />
   <link rel="canonical" href="https://my-website.vercel.app/services.html" />
 
   <!-- Social / Open Graph -->
   <meta property="og:title" content="Natural Edge Media — Services" />
-  <meta property="og:description" content="SEO content systems, social growth, email flows, and full-funnel strategy for sustainable, long-term results." />
+  <meta property="og:description" content="SEO, social growth, email flows, paid ads, and full-funnel strategy for sustainable, long-term results." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://my-website.vercel.app/services.html" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Styles (cache-busted so Vercel/CDN serves latest) -->
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <!-- Styles (cache-busted) -->
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body>
   <!-- Header -->
@@ -47,9 +47,9 @@
       <!-- SEO Boost -->
       <div class="card">
         <img
-          src="img/services-seo.jpg"
+          src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop"
           alt="SEO analytics dashboard showing organic traffic growth"
-          loading="lazy" decoding="async" />
+          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
         <div class="card-body">
           <h3>SEO Boost</h3>
           <p>Keyword research + optimized content to grow qualified organic traffic and compound results over time.</p>
@@ -68,9 +68,9 @@
       <!-- Social Growth -->
       <div class="card">
         <img
-          src="img/services-social.jpg"
+          src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1200&auto=format&fit=crop"
           alt="Team planning social media content and short-form video"
-          loading="lazy" decoding="async" />
+          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
         <div class="card-body">
           <h3>Social Growth</h3>
           <p>On-brand posts and short-form video that build community and reach without gimmicks.</p>
@@ -89,9 +89,9 @@
       <!-- Email Flows -->
       <div class="card">
         <img
-          src="img/services-email.jpg"
+          src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?q=80&w=1200&auto=format&fit=crop"
           alt="Marketing team collaborating on lifecycle email flow designs"
-          loading="lazy" decoding="async" />
+          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
         <div class="card-body">
           <h3>Email Flows</h3>
           <p>Lifecycle sequences and newsletters that convert without being pushy—designed to welcome, nurture, and re-engage.</p>
@@ -107,15 +107,36 @@
         </div>
       </div>
 
+      <!-- Advertisements (NEW) -->
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1200&auto=format&fit=crop"
+          alt="Ad campaign manager screen with budget, audiences, and creative previews"
+          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+        <div class="card-body">
+          <h3>Advertisements</h3>
+          <p>Conversion-focused paid campaigns across Meta, Google, and TikTok—built on strong creative, tight targeting, and clear reporting.</p>
+          <ul class="bullets">
+            <li>Account + pixel/GA4 setup</li>
+            <li>Creative testing &amp; audiences</li>
+            <li>Weekly optimization &amp; reporting</li>
+          </ul>
+          <div class="actions">
+            <a href="portfolio.html#ads" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Run my ads</a>
+          </div>
+        </div>
+      </div>
+
       <!-- Full-Funnel Strategy -->
       <div class="card">
         <img
-          src="img/services-funnel.jpg"
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
           alt="Laptop with marketing analytics dashboard illustrating full-funnel"
-          loading="lazy" decoding="async" />
+          loading="lazy" decoding="async" referrerpolicy="no-referrer" />
         <div class="card-body">
           <h3>Full-Funnel Strategy</h3>
-          <p>Integrated plan across SEO, social, and email with monthly reporting and iterative improvements.</p>
+          <p>Integrated plan across SEO, social, email, and ads with monthly reporting and iterative improvements.</p>
           <ul class="bullets">
             <li>Unified content system</li>
             <li>Top/Mid/Bottom-funnel mapping</li>
@@ -140,7 +161,7 @@
     </div>
   </footer>
 
-  <!-- JSON-LD: Breadcrumbs + Services -->
+  <!-- JSON-LD: Breadcrumbs + Services (updated with Ads) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -179,15 +200,23 @@
   },{
     "@context": "https://schema.org",
     "@type": "Service",
+    "name": "Advertisements",
+    "provider": { "@type": "Organization", "name": "Natural Edge Media" },
+    "description": "Conversion-focused paid campaigns across Meta, Google, and TikTok with creative testing, audience targeting, and weekly optimization.",
+    "areaServed": "Global",
+    "serviceType": "Digital Advertising"
+  },{
+    "@context": "https://schema.org",
+    "@type": "Service",
     "name": "Full-Funnel Strategy",
     "provider": { "@type": "Organization", "name": "Natural Edge Media" },
-    "description": "Integrated cross-channel growth strategy across SEO, social, and email with ongoing reporting.",
+    "description": "Integrated cross-channel growth strategy across SEO, social, email, and ads with ongoing reporting.",
     "areaServed": "Global",
     "serviceType": "Marketing Strategy"
   }]
   </script>
 
-  <!-- JS: footer year + your small enhancements -->
+  <!-- JS -->
   <script src="script.js" defer></script>
 </body>
 </html>
