@@ -109,11 +109,15 @@
 
       <!-- Advertisements (updated image: PPC/ads dashboard on tablet with charts) -->
       <div class="card">
-<img
-  src="/images/advertisements-dashboard.jpg"
+import Image from "next/image";
+<Image
+  src="/images/advertisements-dashboard.jpg" // make sure this file is in /public/images/
   alt="Digital advertising dashboard showing campaign performance charts and KPIs"
+  width={500}
+  height={300}
   className="w-full h-48 object-cover rounded-t-xl"
 />
+
 
         <div class="card-body">
           <h3>Advertisements</h3>
