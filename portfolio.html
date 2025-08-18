@@ -3,11 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Natural Edge Media — Portfolio</title>
-  <meta name="description" content="Sample case studies from Natural Edge Media to showcase style, structure, and outcomes." />
-  <link rel="stylesheet" href="styles.css" />
+
+  <title>Portfolio | Natural Edge Media — Composite Client Work & Case Studies</title>
+  <meta name="description" content="Selected composite case studies across SEO, social growth, email flows, paid ads, and full-funnel strategy. Realistic problems, actions, and outcomes that reflect our approach." />
+  <link rel="canonical" href="https://my-website.vercel.app/portfolio.html" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio — Natural Edge Media" />
+  <meta property="og:description" content="Believable composite case studies across SEO, social, email, ads, and full-funnel strategy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://my-website.vercel.app/portfolio.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80" />
+  <meta property="og:image:alt" content="Analytics dashboard with charts and KPIs" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="styles.css?v=12" />
+
+  <style>
+    .grid-3 { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:1.25rem; }
+    .grid-2 { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:1.25rem; }
+    @media (max-width: 1024px){ .grid-3{ grid-template-columns:1fr; } .grid-2{ grid-template-columns:1fr; } }
+    .media { border-radius:14px; overflow:hidden; display:block; }
+    .badge { display:inline-block; padding:.25rem .6rem; border-radius:999px; background:#eef1ea; color:#3c4b2c; font-size:.85rem; margin-right:.35rem; }
+    .kv { display:grid; grid-template-columns: 140px 1fr; gap:.5rem; }
+    .kv div { padding:.25rem 0; }
+    .quote { font-style:italic; opacity:.9; }
+    .muted { opacity:.75; }
+  </style>
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header">
       <a class="brand" href="index.html">Natural Edge <span>Media</span></a>
@@ -23,53 +49,260 @@
     </div>
   </header>
 
-  <section class="section section-cream">
+  <!-- Intro -->
+  <section class="section section-sand">
+    <div class="container narrow center">
+      <h1>Portfolio</h1>
+      <p class="lead">Believable composite case studies that reflect how we plan, build, and iterate. Brands and quotes are fictional; outcomes mirror typical ranges we see when the fundamentals are in place.</p>
+      <div class="muted" style="margin-top:.5rem">Focus areas: <span class="badge">SEO</span><span class="badge">Social</span><span class="badge">Email</span><span class="badge">Ads</span><span class="badge">Full-Funnel</span></div>
+    </div>
+  </section>
+
+  <!-- SEO -->
+  <section id="seo" class="section">
     <div class="container">
-      <h1 class="center">Portfolio</h1>
-      <p class="lead center">Realistic sample layouts you can replace with client work and metrics.</p>
-
-      <div class="pf-grid">
-        <article class="pf">
-          <img src="https://images.unsplash.com/photo-1520975922284-4933b0c6a957?q=80&w=1600&auto=format&fit=crop" alt="Eco fashion studio" />
-          <div class="pf-body">
-            <h3>EcoWear — Organic Apparel</h3>
-            <p class="meta">Sustainable Fashion · SEO + Content</p>
-            <p class="stats"><strong>+128%</strong> organic traffic · <strong>12</strong> keywords top-3</p>
-            <a href="contact.html" class="btn btn-outline">Read case study</a>
+      <h2>SEO Boost</h2>
+      <div class="cards">
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1200&q=80" alt="Search performance chart" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Ridge & River Outfitters — Category Hubs</h3>
+            <p class="muted">Outdoor apparel · 3-month sprint</p>
+            <div class="grid-2" style="margin:.75rem 0">
+              <div class="kv"><div><strong>Goal</strong></div><div>Grow non-brand clicks ahead of peak season</div></div>
+              <div class="kv"><div><strong>Stack</strong></div><div>GA4, GSC, Sheets, Ahrefs</div></div>
+              <div class="kv"><div><strong>Plan</strong></div><div>8 long-form hubs + 24 briefs; internal links; on-page fixes</div></div>
+              <div class="kv"><div><strong>Result</strong></div><div><strong>+64%</strong> non-brand clicks; <strong>+28%</strong> conversion rate to PLP</div></div>
+            </div>
+            <p class="quote">“Traffic quality went up, not just volume. Our size guide now converts like a landing page.” — <em>Fictional eCom Lead</em></p>
+            <div class="actions" style="margin-top:.75rem">
+              <a href="contact.html" class="btn btn-green">Ask for the playbook</a>
+              <a href="services.html#seo" class="btn btn-outline">See SEO service</a>
+            </div>
           </div>
         </article>
 
-        <article class="pf">
-          <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=1600&auto=format&fit=crop" alt="Minimal workspace" />
-          <div class="pf-body">
-            <h3>GreenDesk — B2B SaaS</h3>
-            <p class="meta">Productivity · Email Lifecycle</p>
-            <p class="stats"><strong>+35%</strong> trial→paid · <strong>+22%</strong> open rate</p>
-            <a href="contact.html" class="btn btn-outline">Read case study</a>
-          </div>
-        </article>
-
-        <article class="pf">
-          <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1600&auto=format&fit=crop" alt="Workshop" />
-          <div class="pf-body">
-            <h3>PureSkin — DTC Skincare</h3>
-            <p class="meta">Beauty & Wellness · Full-Funnel</p>
-            <p class="stats"><strong>5×</strong> blended ROAS · <strong>+78%</strong> repeat</p>
-            <a href="contact.html" class="btn btn-outline">Read case study</a>
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="Content planning doc" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Ledgerly — Knowledge Base SEO</h3>
+            <p class="muted">B2B SaaS · 10-week sprint</p>
+            <div class="grid-2" style="margin:.75rem 0">
+              <div class="kv"><div><strong>Goal</strong></div><div>Reduce support load; capture long-tail intent</div></div>
+              <div class="kv"><div><strong>Stack</strong></div><div>HubSpot KB, GSC, Looker Studio</div></div>
+              <div class="kv"><div><strong>Plan</strong></div><div>Topic clusters, schema, “solve in 60s” modules</div></div>
+              <div class="kv"><div><strong>Result</strong></div><div><strong>-17%</strong> tickets; <strong>+46%</strong> sign-ups from docs</div></div>
+            </div>
+            <div class="actions">
+              <a href="contact.html" class="btn btn-green">See outline</a>
+              <a href="services.html#seo" class="btn btn-outline">SEO service</a>
+            </div>
           </div>
         </article>
       </div>
     </div>
   </section>
 
+  <!-- Social -->
+  <section id="social" class="section section-sand">
+    <div class="container">
+      <h2>Social Growth</h2>
+      <div class="cards">
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1200&q=80" alt="Short-form video storyboard" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Pine & Pollen Skincare — UGC Sprint</h3>
+            <p class="muted">Beauty DTC · 6 weeks</p>
+            <div class="grid-2" style="margin:.75rem 0">
+              <div class="kv"><div><strong>Goal</strong></div><div>Grow reach without trend-chasing</div></div>
+              <div class="kv"><div><strong>Stack</strong></div><div>CapCut, Notion calendar, Meta Creator Studio</div></div>
+              <div class="kv"><div><strong>Plan</strong></div><div>12 posts/mo (reels + carousels); hooks & retention audit</div></div>
+              <div class="kv"><div><strong>Result</strong></div><div><strong>+138%</strong> reach; <strong>+61%</strong> saves; 3 UGC creators onboarded</div></div>
+            </div>
+            <p class="quote">“We finally have a repeatable content rhythm.” — <em>Fictional Founder</em></p>
+            <div class="actions">
+              <a href="services.html#social" class="btn btn-outline">See social service</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1604881987926-c9c9b9b5680d?auto=format&fit=crop&w=1200&q=80" alt="Instagram grid with brand palette" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Fieldhouse Coffee — Community Build</h3>
+            <p class="muted">Local cafe · 8 weeks</p>
+            <div class="grid-2" style="margin:.75rem 0">
+              <div class="kv"><div><strong>Goal</strong></div><div>Increase repeat visits; showcase seasonal menu</div></div>
+              <div class="kv"><div><strong>Plan</strong></div><div>Reels (behind-the-bar), polls, carousel features</div></div>
+              <div class="kv"><div><strong>Result</strong></div><div><strong>+24%</strong> foot traffic; <strong>+79%</strong> story interactions</div></div>
+              <div class="kv"><div><strong>Stack</strong></div><div>Canva, Meta, Typefully</div></div>
+            </div>
+            <div class="actions">
+              <a href="contact.html" class="btn btn-green">Build my calendar</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Email -->
+  <section id="email" class="section">
+    <div class="container">
+      <h2>Email Flows</h2>
+      <div class="cards">
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="Email flow diagram on laptop" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Harvest Roasters — Lifecycle Overhaul</h3>
+            <p class="muted">Subscription coffee · 5 weeks</p>
+            <div class="grid-2" style="margin:.75rem 0">
+              <div class="kv"><div><strong>Goal</strong></div><div>Lift first-to-second order rate</div></div>
+              <div class="kv"><div><strong>Stack</strong></div><div>Klaviyo, GA4, Post-purchase survey</div></div>
+              <div class="kv"><div><strong>Plan</strong></div><div>Welcome (3 emails), Browse/Cart, Winback with quiz</div></div>
+              <div class="kv"><div><strong>Result</strong></div><div><strong>+38%</strong> repeat revenue; <strong>-12%</strong> churn</div></div>
+            </div>
+            <div class="actions">
+              <a href="services.html#email" class="btn btn-outline">See email service</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1200&q=80" alt="Newsletter content layout" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Quarry Tools — B2B Nurture</h3>
+            <p class="muted">Industrial supplier · 6 weeks</p>
+            <div class="grid-2" style="margin:.75rem 0">
+              <div class="kv"><div><strong>Goal</strong></div><div>Nurture inbound leads to demo</div></div>
+              <div class="kv"><div><strong>Plan</strong></div><div>Case-led newsletters; 3-part nurture with ROI calculator</div></div>
+              <div class="kv"><div><strong>Result</strong></div><div><strong>+29%</strong> demo rate; <strong>+19%</strong> qualified pipeline</div></div>
+              <div class="kv"><div><strong>Stack</strong></div><div>HubSpot, Segment</div></div>
+            </div>
+            <div class="actions">
+              <a href="contact.html" class="btn btn-green">Audit my flows</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ads -->
+  <section id="ads" class="section section-sand">
+    <div class="container">
+      <h2>Advertisements</h2>
+      <div class="cards">
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Ads dashboard with charts" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>TrailNest — Prospecting & Retargeting</h3>
+            <p class="muted">Outdoor gear · 8 weeks</p>
+            <div class="grid-2" style="margin:.75rem 0">
+              <div class="kv"><div><strong>Goal</strong></div><div>Acquire new customers efficiently</div></div>
+              <div class="kv"><div><strong>Plan</strong></div><div>UGC angles, interest stacks, Advantage+ shopping; retargeting with bundles</div></div>
+              <div class="kv"><div><strong>Result</strong></div><div><strong>3.1×</strong> blended ROAS; <strong>-22%</strong> CAC</div></div>
+              <div class="kv"><div><strong>Stack</strong></div><div>Meta, TikTok, GA4, Triple Whale</div></div>
+            </div>
+            <div class="actions">
+              <a href="services.html#ads" class="btn btn-outline">See ads service</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Creative testing wall" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Bonfire Homes — Local Lead Gen</h3>
+            <p class="muted">Home services · 5 weeks</p>
+            <div class="grid-2" style="margin:.75rem 0">
+              <div class="kv"><div><strong>Goal</strong></div><div>Generate qualified inquiries</div></div>
+              <div class="kv"><div><strong>Plan</strong></div><div>Lead ads + landing page; map-based radius targeting</div></div>
+              <div class="kv"><div><strong>Result</strong></div><div><strong>-41%</strong> CPL; <strong>+36%</strong> booking rate</div></div>
+              <div class="kv"><div><strong>Stack</strong></div><div>Meta, Google Ads, GA4</div></div>
+            </div>
+            <div class="actions">
+              <a href="contact.html" class="btn btn-green">Run my ads</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full-Funnel -->
+  <section id="funnel" class="section">
+    <div class="container">
+      <h2>Full-Funnel Strategy</h2>
+      <div class="cards">
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80" alt="Unified growth dashboard" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Evergrain Supplements — From Siloed to System</h3>
+            <p class="muted">DTC wellness · 12 weeks</p>
+            <div class="grid-2" style="margin:.75rem 0">
+              <div class="kv"><div><strong>Goal</strong></div><div>Unify SEO, social, email, and ads under one plan</div></div>
+              <div class="kv"><div><strong>Plan</strong></div><div>Content system, GA4 + pixel cleanup, UTM discipline, monthly reviews</div></div>
+              <div class="kv"><div><strong>Result</strong></div><div><strong>+24%</strong> revenue; <strong>+33%</strong> repeat rate; stable CAC</div></div>
+              <div class="kv"><div><strong>Stack</strong></div><div>GA4, Meta, Klaviyo, Sheets, Looker Studio</div></div>
+            </div>
+            <p class="quote">“Clarity created momentum. Everyone knows the next test.” — <em>Fictional Marketing Lead</em></p>
+            <div class="actions">
+              <a href="services.html#funnel" class="btn btn-outline">See full-funnel service</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-sand">
+    <div class="container center narrow">
+      <h2>Want a plan like these?</h2>
+      <p class="lead">Tell us your goals and constraints. We’ll return a short plan with options and transparent pricing.</p>
+      <div class="actions" style="justify-content:center">
+        <a href="contact.html" class="btn btn-green">Get a free growth plan</a>
+        <a href="services.html" class="btn btn-outline">Explore services</a>
+      </div>
+      <p class="muted" style="margin-top:.75rem">All projects on this page are composites for demonstration.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer">
       <p>© <span id="year"></span> Natural Edge Media</p>
       <nav aria-label="Footer">
-        <a href="services.html">Services</a> · <a href="contact.html">Contact</a>
+        <a href="about.html">Why Us</a> · <a href="services.html">Services</a> · <a href="portfolio.html">Portfolio</a> · <a href="contact.html">Contact</a>
       </nav>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
+  <!-- JSON-LD Case Study (example for one project) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CreativeWork",
+    "name":"Ridge & River Outfitters — Category Hubs (Composite)",
+    "description":"Outdoor apparel SEO sprint: 8 hubs + 24 briefs, internal linking, on-page fixes. +64% non-brand clicks; +28% PLP CVR.",
+    "author":{"@type":"Organization","name":"Natural Edge Media"},
+    "url":"https://my-website.vercel.app/portfolio.html#seo"
+  }
+  </script>
+
+  <!-- Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://my-website.vercel.app/"},
+      {"@type":"ListItem","position":2,"name":"Portfolio","item":"https://my-website.vercel.app/portfolio.html"}
+    ]
+  }
+  </script>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
