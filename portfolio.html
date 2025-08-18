@@ -4,56 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Portfolio | Natural Edge Media — Proven Growth Work</title>
-  <meta name="description" content="Explore client-style projects by Natural Edge Media: SEO growth systems, paid ads sprints, social content strategies, and email automation that compounds." />
+  <title>Portfolio | Natural Edge Media — Composite Client Work & Case Studies</title>
+  <meta name="description" content="Believable composite case studies across SEO, social growth, email flows, ads, and full-funnel strategy. Click any project to view the full breakdown." />
   <link rel="canonical" href="https://my-website.vercel.app/portfolio.html" />
+  <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Portfolio | Natural Edge Media" />
-  <meta property="og:description" content="Fake-but-realistic client-style projects showing SEO, ads, and social/email growth work." />
+  <meta property="og:title" content="Portfolio — Natural Edge Media" />
+  <meta property="og:description" content="Click into detailed, believable composite case studies across SEO, social, email, ads, and full-funnel strategy." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://my-website.vercel.app/portfolio.html" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80" />
+  <meta property="og:image:alt" content="Analytics dashboard with charts and KPIs" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="stylesheet" href="styles.css?v=12" />
+
   <style>
+    /* Grid: 2-level horizontal display (responsive) */
     .grid-portfolio {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 1.25rem;
     }
-    .card {
-      background: #fff;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,.08);
-      display: flex;
-      flex-direction: column;
+    @media (max-width: 1200px) { .grid-portfolio { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 740px)  { .grid-portfolio { grid-template-columns: 1fr; } }
+
+    .card { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,.08); display:flex; flex-direction:column; }
+    .card img { width:100%; height:220px; object-fit:cover; display:block; }
+    .card-body { padding:1.1rem 1.2rem; flex:1; }
+    .card-body h3 { margin:0 0 .35rem; font-size:1.15rem; }
+    .btn-outline { display:inline-block; margin-top:.65rem; padding:.5rem .9rem; border:1px solid #333; border-radius:8px; text-decoration:none; font-size:.92rem; color:#333; }
+
+    /* Modal <dialog> */
+    dialog.case {
+      width:min(920px, 92vw); border:none; border-radius:16px; padding:0; box-shadow:0 25px 80px rgba(0,0,0,.35);
     }
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .card-body {
-      padding: 1.25rem;
-      flex: 1;
-    }
-    .card-body h3 {
-      margin-top: 0;
-      font-size: 1.25rem;
-    }
-    .btn-outline {
-      display: inline-block;
-      margin-top: .75rem;
-      padding: .5rem 1rem;
-      border: 1px solid #333;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: .9rem;
-      color: #333;
-    }
+    dialog::backdrop { background: rgba(0,0,0,.45); }
+    .case-header { padding:1.1rem 1.25rem; background:#f6f3ee; border-bottom:1px solid #e8e2d9; }
+    .case-body { padding:1.25rem; }
+    .case-hero { width:100%; height:auto; border-radius:14px; overflow:hidden; display:block; }
+    .case-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:2rem; margin-top:1.25rem; }
+    @media (max-width: 900px){ .case-grid { grid-template-columns:1fr; } }
+    .bullets li { margin-bottom:.4rem; }
+    .actions { display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1rem; }
+    .close-row { display:flex; justify-content:flex-end; padding:0 1.25rem 1.1rem; }
+    .btn-close { border:1px solid #999; background:#fff; padding:.5rem .9rem; border-radius:8px; cursor:pointer; }
+    .muted { opacity:.75; }
+    .badge { display:inline-block; padding:.2rem .55rem; border-radius:999px; background:#eef1ea; color:#3c4b2c; font-size:.8rem; margin-right:.35rem; }
   </style>
 </head>
 <body>
@@ -73,78 +71,92 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="section section-sand center">
-    <div class="container narrow">
-      <h1>Our Portfolio</h1>
-      <p class="lead">A look at believable client-style projects we’ve executed across SEO, ads, social, and email.</p>
+  <!-- Intro -->
+  <section class="section section-sand">
+    <div class="container narrow center">
+      <h1>Portfolio</h1>
+      <p class="lead">Click any project to open the full case study. These are believable composites that reflect our real process, plans, and ranges of outcomes.</p>
+      <div class="muted" style="margin-top:.5rem">Focus areas: <span class="badge">SEO</span><span class="badge">Ads</span><span class="badge">Social</span><span class="badge">Email</span><span class="badge">Full-Funnel</span></div>
     </div>
   </section>
 
-  <!-- GRID -->
+  <!-- 2-level horizontal display (cards) -->
   <section class="section">
     <div class="container grid-portfolio">
 
-      <!-- SEO Growth -->
+      <!-- Everwell (SEO) -->
       <article class="card">
         <img src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1200&q=80" alt="SEO traffic dashboard" />
         <div class="card-body">
           <h3>Everwell Supplements</h3>
-          <p>Built a content hub + internal linking strategy that lifted qualified organic traffic <strong>+92% in 3 months</strong>.</p>
-          <a href="#" class="btn-outline">View case study</a>
+          <p>Content hubs + internal linking lifted qualified organic clicks <strong>+92% in 3 months</strong>.</p>
+          <a href="#open" data-case="everwell" class="btn-outline">View case study</a>
         </div>
       </article>
 
-      <!-- Paid Ads -->
+      <!-- Flow Athletics (Ads) -->
       <article class="card">
         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Ad campaign dashboard" />
         <div class="card-body">
           <h3>Flow Athletics</h3>
-          <p>Launched UGC-driven Meta campaigns with iterative testing. Hit <strong>3.4× blended ROAS</strong> by week 6.</p>
-          <a href="#" class="btn-outline">View breakdown</a>
+          <p>UGC-driven Meta campaigns with weekly testing hit <strong>3.4× blended ROAS</strong> by week 6.</p>
+          <a href="#open" data-case="flow" class="btn-outline">View case study</a>
         </div>
       </article>
 
-      <!-- Social Growth -->
+      <!-- Nomad Coffee (Social) -->
       <article class="card">
         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80" alt="Social media content strategy" />
         <div class="card-body">
           <h3>Nomad Coffee Co.</h3>
-          <p>Scaled TikTok & Instagram presence with content pillars and hooks—<strong>+24k followers</strong> in 60 days.</p>
-          <a href="#" class="btn-outline">See content plan</a>
+          <p>Content pillars and hooks scaled TikTok & IG—<strong>+24k followers</strong> in 60 days.</p>
+          <a href="#open" data-case="nomad" class="btn-outline">View case study</a>
         </div>
       </article>
 
-      <!-- Email Automation -->
+      <!-- Luna Skincare (Email) -->
       <article class="card">
         <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="Email marketing workspace" />
         <div class="card-body">
           <h3>Luna Skincare</h3>
-          <p>Designed retention flows (welcome, cart-abandon, winback). Drove <strong>+39% repeat revenue</strong> in 10 weeks.</p>
-          <a href="#" class="btn-outline">See flows</a>
+          <p>Lifecycle flows (welcome, cart, winback) drove <strong>+39% repeat revenue</strong> in 10 weeks.</p>
+          <a href="#open" data-case="luna" class="btn-outline">View case study</a>
         </div>
       </article>
 
-      <!-- Funnel Strategy -->
+      <!-- Summit Outdoor (Full-Funnel) -->
       <article class="card">
-        <img src="https://images.unsplash.com/photo-1507209696998-3c532be9b2b5?auto=format&fit=crop&w=1200&q=80" alt="Full funnel planning" />
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80" alt="Full funnel planning" />
         <div class="card-body">
           <h3>Summit Outdoor Gear</h3>
-          <p>Mapped and built a complete funnel: awareness ads, nurture email, and SEO hubs—<strong>52% lift in sales</strong>.</p>
-          <a href="#" class="btn-outline">Explore funnel</a>
+          <p>Unified SEO, ads, email & social under one plan—<strong>+24% revenue</strong>, <strong>+33% repeat rate</strong>.</p>
+        <a href="#open" data-case="summit" class="btn-outline">View case study</a>
         </div>
       </article>
 
-      <!-- Branding / Design -->
+      <!-- Haven Interiors (Brand/Refresh) -->
       <article class="card">
         <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Branding mockup" />
         <div class="card-body">
           <h3>Haven Interiors</h3>
-          <p>Brand + content refresh with calming visuals and minimalist UX, increasing <strong>site conversions by 31%</strong>.</p>
-          <a href="#" class="btn-outline">View mockups</a>
+          <p>Calm brand + content refresh with minimalist UX increased conversions <strong>+31%</strong>.</p>
+          <a href="#open" data-case="haven" class="btn-outline">View case study</a>
         </div>
       </article>
 
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-sand">
+    <div class="container center narrow">
+      <h2>Want a plan like these?</h2>
+      <p class="lead">Tell us your goals. We’ll return a short plan with options and transparent pricing.</p>
+      <div class="actions" style="justify-content:center">
+        <a href="contact.html" class="btn btn-green">Get a free growth plan</a>
+        <a href="services.html" class="btn btn-outline">Explore services</a>
+      </div>
+      <p class="muted" style="margin-top:.75rem">All projects are composites for demonstration.</p>
     </div>
   </section>
 
@@ -158,6 +170,276 @@
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <!-- ===================== MODALS ===================== -->
+  <!-- Everwell (SEO) -->
+  <dialog class="case" id="case-everwell" aria-labelledby="everwell-title">
+    <header class="case-header">
+      <h2 id="everwell-title">Everwell Supplements — SEO Content Hubs</h2>
+      <p class="muted">Outdoor wellness DTC · 3-month sprint · Goal: non-brand growth ahead of peak season</p>
+    </header>
+    <div class="case-body">
+      <img class="case-hero" src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1600&q=80" alt="Analytics dashboard showing SEO growth" width="1600" height="1066" />
+      <div class="case-grid">
+        <div>
+          <h3>Approach</h3>
+          <ul class="bullets">
+            <li>Keyword map by intent (TOFU/MOFU/BOFU) and seasonality</li>
+            <li>8 long-form category hubs + 24 supporting briefs</li>
+            <li>On-page fixes (titles, schema, FAQs) and internal link pass</li>
+            <li>“Size/guide” utility modules added to high-traffic posts</li>
+          </ul>
+          <h3>Stack</h3>
+          <p>GA4, Google Search Console, Ahrefs, Sheets, Looker Studio</p>
+        </div>
+        <div>
+          <h3>Outcomes (90 days)</h3>
+          <ul class="bullets">
+            <li><strong>+92%</strong> non-brand clicks (GSC)</li>
+            <li><strong>+28%</strong> click-through rate to PLPs</li>
+            <li><strong>+18%</strong> revenue from organic</li>
+          </ul>
+          <p class="muted">Attribution: blended last-click + assisted from GA4.</p>
+          <div class="actions">
+            <a href="services.html#seo" class="btn btn-outline">See SEO service</a>
+            <a href="contact.html" class="btn btn-green">Ask for this playbook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="close-row"><button class="btn-close" data-close>Close</button></div>
+  </dialog>
+
+  <!-- Flow Athletics (Ads) -->
+  <dialog class="case" id="case-flow" aria-labelledby="flow-title">
+    <header class="case-header">
+      <h2 id="flow-title">Flow Athletics — UGC Meta Ads Sprint</h2>
+      <p class="muted">Athletic apparel · 6 weeks · Goal: scale prospecting efficiently</p>
+    </header>
+    <div class="case-body">
+      <img class="case-hero" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80" alt="Meta ads dashboard with charts" width="1600" height="1066" />
+      <div class="case-grid">
+        <div>
+          <h3>Plan</h3>
+          <ul class="bullets">
+            <li>UGC concepts: problem/solution, try-on, comparison</li>
+            <li>Interest stacks + broad Advantage+ Shopping</li>
+            <li>Creative testing cadence: 6 new variants/week</li>
+            <li>Retargeting: PDP viewers &amp; ATC with bundle offer</li>
+          </ul>
+          <h3>Stack</h3>
+          <p>Meta Ads, TikTok Ads (light), GA4, Triple Whale</p>
+        </div>
+        <div>
+          <h3>Outcomes (week 6)</h3>
+          <ul class="bullets">
+            <li><strong>3.4×</strong> blended ROAS</li>
+            <li><strong>-19%</strong> blended CAC</li>
+            <li><strong>+32%</strong> ATC→Purchase CVR in retargeting</li>
+          </ul>
+          <p class="muted">Attribution: channel-level (platform) + blended model via TW.</p>
+          <div class="actions">
+            <a href="services.html#ads" class="btn btn-outline">See ads service</a>
+            <a href="contact.html" class="btn btn-green">Run campaigns like this</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="close-row"><button class="btn-close" data-close>Close</button></div>
+  </dialog>
+
+  <!-- Nomad Coffee (Social) -->
+  <dialog class="case" id="case-nomad" aria-labelledby="nomad-title">
+    <header class="case-header">
+      <h2 id="nomad-title">Nomad Coffee Co. — Social Content System</h2>
+      <p class="muted">Local cafe · 8 weeks · Goal: increase repeat visits and UGC</p>
+    </header>
+    <div class="case-body">
+      <img class="case-hero" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1600&q=80" alt="Social media planning board" width="1600" height="1066" />
+      <div class="case-grid">
+        <div>
+          <h3>Plan</h3>
+          <ul class="bullets">
+            <li>Content pillars (behind-the-bar, beans 101, community)</li>
+            <li>12 posts/mo: reels + carousels; hooks &amp; retention checks</li>
+            <li>Weekly prompts for UGC/story polls</li>
+          </ul>
+          <h3>Stack</h3>
+          <p>CapCut, Canva, Meta Creator Studio, Typefully</p>
+        </div>
+        <div>
+          <h3>Outcomes (60 days)</h3>
+          <ul class="bullets">
+            <li><strong>+24k</strong> followers (TikTok + IG)</li>
+            <li><strong>+79%</strong> story interactions</li>
+            <li><strong>+24%</strong> in-store foot traffic (POS)</li>
+          </ul>
+          <div class="actions">
+            <a href="services.html#social" class="btn btn-outline">See social service</a>
+            <a href="contact.html" class="btn btn-green">Plan my content</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="close-row"><button class="btn-close" data-close>Close</button></div>
+  </dialog>
+
+  <!-- Luna Skincare (Email) -->
+  <dialog class="case" id="case-luna" aria-labelledby="luna-title">
+    <header class="case-header">
+      <h2 id="luna-title">Luna Skincare — Email Lifecycle Overhaul</h2>
+      <p class="muted">DTC beauty · 10 weeks · Goal: drive repeat revenue</p>
+    </header>
+    <div class="case-body">
+      <img class="case-hero" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1600&q=80" alt="Email automation and flow chart" width="1600" height="1066" />
+      <div class="case-grid">
+        <div>
+          <h3>Plan</h3>
+          <ul class="bullets">
+            <li>Welcome (3), Browse, Cart, Winback sequences</li>
+            <li>Preference capture + quiz for product match</li>
+            <li>Deliverability hygiene: list cleaning + warmup</li>
+          </ul>
+          <h3>Stack</h3>
+          <p>Klaviyo, GA4, Post-purchase survey</p>
+        </div>
+        <div>
+          <h3>Outcomes (10 weeks)</h3>
+          <ul class="bullets">
+            <li><strong>+39%</strong> repeat revenue</li>
+            <li><strong>-12%</strong> churn</li>
+            <li><strong>+21%</strong> email-attributed orders</li>
+          </ul>
+          <div class="actions">
+            <a href="services.html#email" class="btn btn-outline">See email service</a>
+            <a href="contact.html" class="btn btn-green">Audit my flows</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="close-row"><button class="btn-close" data-close>Close</button></div>
+  </dialog>
+
+  <!-- Summit Outdoor (Full-Funnel) -->
+  <dialog class="case" id="case-summit" aria-labelledby="summit-title">
+    <header class="case-header">
+      <h2 id="summit-title">Summit Outdoor Gear — Full-Funnel System</h2>
+      <p class="muted">DTC outdoor · 12 weeks · Goal: unify growth efforts</p>
+    </header>
+    <div class="case-body">
+      <img class="case-hero" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80" alt="Unified growth dashboard and planning" width="1600" height="1066" />
+      <div class="case-grid">
+        <div>
+          <h3>Plan</h3>
+          <ul class="bullets">
+            <li>Content system with SEO hubs and social atomization</li>
+            <li>GA4 + pixel cleanup and UTM discipline</li>
+            <li>Monthly review: tests, insights, next moves</li>
+          </ul>
+          <h3>Stack</h3>
+          <p>GA4, Meta, Klaviyo, Sheets, Looker Studio</p>
+        </div>
+        <div>
+          <h3>Outcomes (12 weeks)</h3>
+          <ul class="bullets">
+            <li><strong>+24%</strong> revenue</li>
+            <li><strong>+33%</strong> repeat rate</li>
+            <li>CAC held flat while scaling spend</li>
+          </ul>
+          <div class="actions">
+            <a href="services.html#funnel" class="btn btn-outline">See full-funnel service</a>
+            <a href="contact.html" class="btn btn-green">Build my system</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="close-row"><button class="btn-close" data-close>Close</button></div>
+  </dialog>
+
+  <!-- Haven Interiors (Brand/Refresh) -->
+  <dialog class="case" id="case-haven" aria-labelledby="haven-title">
+    <header class="case-header">
+      <h2 id="haven-title">Haven Interiors — Brand &amp; Content Refresh</h2>
+      <p class="muted">Home &amp; decor · 6 weeks · Goal: lift on-site conversions</p>
+    </header>
+    <div class="case-body">
+      <img class="case-hero" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80" alt="Branding mockups and moodboard" width="1600" height="1066" />
+      <div class="case-grid">
+        <div>
+          <h3>Plan</h3>
+          <ul class="bullets">
+            <li>Palette + typography tuned to calming, natural tones</li>
+            <li>Homepage narrative: problem → solution → proof</li>
+            <li>UX trims: fewer CTAs, clearer hierarchy, faster LCP</li>
+          </ul>
+          <h3>Stack</h3>
+          <p>Figma, Hotjar, GA4, Lighthouse</p>
+        </div>
+        <div>
+          <h3>Outcomes (30 days)</h3>
+          <ul class="bullets">
+            <li><strong>+31%</strong> conversion rate</li>
+            <li><strong>-0.6s</strong> LCP improvement</li>
+            <li><strong>+22%</strong> PDP engagement time</li>
+          </ul>
+          <div class="actions">
+            <a href="services.html" class="btn btn-outline">Explore services</a>
+            <a href="contact.html" class="btn btn-green">Refresh my site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="close-row"><button class="btn-close" data-close>Close</button></div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script>
+    // Open/close modals by data-case attribute
+    const openers = document.querySelectorAll('[data-case]');
+    const dialogs = {
+      everwell: document.getElementById('case-everwell'),
+      flow: document.getElementById('case-flow'),
+      nomad: document.getElementById('case-nomad'),
+      luna: document.getElementById('case-luna'),
+      summit: document.getElementById('case-summit'),
+      haven: document.getElementById('case-haven')
+    };
+
+    openers.forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const key = a.getAttribute('data-case');
+        const dlg = dialogs[key];
+        if (dlg && typeof dlg.showModal === 'function') dlg.showModal();
+      });
+    });
+
+    // Close buttons + backdrop click
+    document.querySelectorAll('dialog.case').forEach(dlg => {
+      dlg.addEventListener('click', (e) => {
+        const rect = dlg.getBoundingClientRect();
+        const clickedBackdrop = e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom;
+        if (clickedBackdrop) dlg.close();
+      });
+      dlg.querySelectorAll('[data-close]').forEach(btn => {
+        btn.addEventListener('click', () => dlg.close());
+      });
+      // ESC key support (native for <dialog>, but ensure)
+      dlg.addEventListener('cancel', (e)=>{ e.preventDefault(); dlg.close(); });
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Optional: JSON-LD for one highlighted case (keep concise) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"CreativeWork",
+    "name":"Everwell Supplements — SEO Content Hubs (Composite)",
+    "author":{"@type":"Organization","name":"Natural Edge Media"},
+    "about":"SEO content hubs, internal linking, on-page fixes",
+    "url":"https://my-website.vercel.app/portfolio.html#everwell"
+  }
+  </script>
 </body>
 </html>
