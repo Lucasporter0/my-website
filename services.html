@@ -16,7 +16,7 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Styles -->
+  <!-- Your site stylesheet -->
   <link rel="stylesheet" href="styles.css?v=12" />
 </head>
 <body>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="container cards">
-      <!-- SEO Boost (unchanged) -->
+      <!-- SEO Boost (unchanged working Unsplash image) -->
       <div class="card">
         <img
           src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?auto=format&fit=crop&w=1600&q=80"
@@ -67,8 +67,10 @@
         </div>
       </div>
 
-      <!-- Social Growth (visible & aligned) -->
+      <!-- Social Growth (keep the working blue social tile OR switch to Unsplash below) -->
       <div class="card">
+        <!-- If you prefer Unsplash here, swap the src to:
+             https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=1600&q=80 -->
         <img
           src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=1600&q=80"
           alt="Team collaborating on social media content strategy"
@@ -90,53 +92,100 @@
         </div>
       </div>
 
-<!-- Email Flows -->
-<div class="card">
-  <img
-    src="https://images.unsplash.com/photo-1587614382346-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80"
-    alt="Laptop with email marketing automation dashboard"
-    loading="lazy" decoding="async" referrerpolicy="no-referrer"
-    width="1600" height="1066"
-    sizes="(min-width: 1200px) 20vw, (min-width: 768px) 33vw, 90vw" />
-  <div class="card-body">
-    <h3>Email Flows</h3>
-    <p>Lifecycle sequences and newsletters that convert without being pushy—designed to welcome, nurture, and re-engage.</p>
-    <ul class="bullets">
-      <li>Welcome, nurture, promo flows</li>
-      <li>Copy + light design in your ESP</li>
-      <li>Deliverability hygiene</li>
-    </ul>
-    <div class="actions">
-      <a href="portfolio.html#email" class="btn btn-outline">See examples</a>
-      <a href="contact.html" class="btn btn-green">Audit my flows</a>
-    </div>
-  </div>
-</div>
+      <!-- Email Flows (INLINE SVG — always visible, no external request) -->
+      <div class="card">
+        <figure class="media" aria-label="Email marketing automation illustration" role="img" style="width:100%;aspect-ratio:16/10;display:block;border-bottom:1px solid rgba(0,0,0,.06)">
+          <svg viewBox="0 0 800 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#e7f0ff"/>
+                <stop offset="1" stop-color="#d9ecff"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#2563eb"/>
+                <stop offset="1" stop-color="#0ea5e9"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="500" fill="url(#g1)"/>
+            <!-- Envelope -->
+            <rect x="170" y="120" rx="14" ry="14" width="220" height="150" fill="white" stroke="#e5e7eb"/>
+            <path d="M170 140 L280 210 L390 140" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+            <!-- Nodes / flow lines -->
+            <circle cx="470" cy="160" r="18" fill="url(#g2)"/>
+            <circle cx="600" cy="120" r="14" fill="#0ea5e9" opacity=".9"/>
+            <circle cx="600" cy="210" r="14" fill="#22c55e" opacity=".9"/>
+            <circle cx="600" cy="300" r="14" fill="#f97316" opacity=".9"/>
+            <path d="M390 195 C430 195, 440 160, 470 160" fill="none" stroke="#94a3b8" stroke-width="3"/>
+            <path d="M488 160 H586" stroke="#94a3b8" stroke-width="3"/>
+            <path d="M600 134 V196" stroke="#94a3b8" stroke-width="3"/>
+            <path d="M600 224 V286" stroke="#94a3b8" stroke-width="3"/>
+          </svg>
+        </figure>
+        <div class="card-body">
+          <h3>Email Flows</h3>
+          <p>Lifecycle sequences and newsletters that convert without being pushy—designed to welcome, nurture, and re-engage.</p>
+          <ul class="bullets">
+            <li>Welcome, nurture, promo flows</li>
+            <li>Copy + light design in your ESP</li>
+            <li>Deliverability hygiene</li>
+          </ul>
+          <div class="actions">
+            <a href="portfolio.html#email" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Audit my flows</a>
+          </div>
+        </div>
+      </div>
 
-<!-- Advertisements -->
-<div class="card">
-  <img
-    src="https://images.unsplash.com/photo-1551288049-8c5a1a0d5b1d?auto=format&fit=crop&w=1600&q=80"
-    alt="Digital ads performance dashboard with charts and budgets"
-    loading="lazy" decoding="async" referrerpolicy="no-referrer"
-    width="1600" height="1066"
-    sizes="(min-width: 1200px) 20vw, (min-width: 768px) 33vw, 90vw" />
-  <div class="card-body">
-    <h3>Advertisements</h3>
-    <p>Conversion-focused paid campaigns across Meta, Google, and TikTok—built on strong creative, tight targeting, and clear reporting.</p>
-    <ul class="bullets">
-      <li>Account + pixel/GA4 setup</li>
-      <li>Creative testing &amp; audiences</li>
-      <li>Weekly optimization &amp; reporting</li>
-    </ul>
-    <div class="actions">
-      <a href="portfolio.html#ads" class="btn btn-outline">See examples</a>
-      <a href="contact.html" class="btn btn-green">Run my ads</a>
-    </div>
-  </div>
-</div>
+      <!-- Advertisements (INLINE SVG — always visible) -->
+      <div class="card">
+        <figure class="media" aria-label="Paid advertising performance dashboard illustration" role="img" style="width:100%;aspect-ratio:16/10;display:block;border-bottom:1px solid rgba(0,0,0,.06)">
+          <svg viewBox="0 0 800 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="dashBg" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#0f172a"/>
+                <stop offset="1" stop-color="#111827"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="500" fill="url(#dashBg)"/>
+            <!-- Chart grid -->
+            <g stroke="#334155" stroke-width="1">
+              <line x1="60" y1="120" x2="740" y2="120"/>
+              <line x1="60" y1="200" x2="740" y2="200"/>
+              <line x1="60" y1="280" x2="740" y2="280"/>
+              <line x1="60" y1="360" x2="740" y2="360"/>
+            </g>
+            <!-- Bars -->
+            <g fill="#22d3ee">
+              <rect x="100" y="240" width="24" height="120"/>
+              <rect x="140" y="200" width="24" height="160"/>
+              <rect x="180" y="180" width="24" height="180"/>
+              <rect x="220" y="220" width="24" height="140"/>
+              <rect x="260" y="160" width="24" height="200"/>
+            </g>
+            <!-- Line -->
+            <polyline fill="none" stroke="#a78bfa" stroke-width="3"
+              points="100,330 180,310 240,260 320,300 400,230 500,260 600,210 700,250"/>
+            <!-- 'Ad' badge -->
+            <rect x="640" y="70" rx="8" ry="8" width="100" height="34" fill="#22c55e"/>
+            <text x="690" y="93" text-anchor="middle" font-size="18" font-family="system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial" fill="#052e16">AD</text>
+          </svg>
+        </figure>
+        <div class="card-body">
+          <h3>Advertisements</h3>
+          <p>Conversion-focused paid campaigns across Meta, Google, and TikTok—built on strong creative, tight targeting, and clear reporting.</p>
+          <ul class="bullets">
+            <li>Account + pixel/GA4 setup</li>
+            <li>Creative testing &amp; audiences</li>
+            <li>Weekly optimization &amp; reporting</li>
+          </ul>
+          <div class="actions">
+            <a href="portfolio.html#ads" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Run my ads</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- Full-Funnel Strategy (unchanged) -->
+      <!-- Full-Funnel Strategy (unchanged working Unsplash image) -->
       <div class="card">
         <img
           src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80"
