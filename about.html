@@ -13,14 +13,15 @@
   <meta property="og:description" content="Research-backed strategy, minimal modern design, and SEO foundations that compound month over month." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://my-website.vercel.app/about.html" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-3caedb23ef36?auto=format&fit=crop&w=1600&q=80" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Site CSS (unchanged) -->
+  <!-- Site CSS -->
   <link rel="stylesheet" href="styles.css?v=12" />
 
-  <!-- Tiny helpers that won’t fight your CSS (safe defaults) -->
+  <!-- Small, safe polish that won’t fight your CSS -->
   <style>
+    /* Grid helpers (use only if not already defined in styles.css) */
     .split{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center}
     @media (max-width: 960px){.split{grid-template-columns:1fr}}
     .actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
@@ -35,10 +36,9 @@
     .muted{opacity:.75}
     .center{text-align:center}
     .narrow{max-width:760px;margin-inline:auto}
-    .media{border-radius:14px;overflow:hidden;display:block}
+    .media{border-radius:14px;overflow:hidden}
   </style>
 </head>
-
 <body>
   <!-- Header -->
   <header class="site-header">
@@ -56,7 +56,7 @@
     </div>
   </header>
 
-  <!-- WHY / HERO -->
+  <!-- WHY / TOP SECTION -->
   <section class="section section-sand">
     <div class="container">
       <div class="split">
@@ -77,20 +77,19 @@
             <a href="portfolio.html" class="btn btn-outline">See proof of work</a>
           </div>
         </div>
-
         <div class="split-col">
-          <!-- Nature photograph (replaces the food photo) -->
+          <!-- Replaced with calm nature image -->
           <img
             class="media"
-            src="https://images.unsplash.com/photo-1500530855697-3caedb23ef36?auto=format&fit=crop&w=1200&q=80"
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
             srcset="
-              https://images.unsplash.com/photo-1500530855697-3caedb23ef36?auto=format&fit=crop&w=800&q=80 800w,
-              https://images.unsplash.com/photo-1500530855697-3caedb23ef36?auto=format&fit=crop&w=1200&q=80 1200w,
-              https://images.unsplash.com/photo-1500530855697-3caedb23ef36?auto=format&fit=crop&w=1600&q=80 1600w
+              https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80 800w,
+              https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80 1200w,
+              https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80 1600w
             "
             sizes="(min-width: 1024px) 42vw, 100vw"
             width="1600" height="1066" loading="eager" fetchpriority="high"
-            alt="Misty evergreen forest landscape viewed from above" />
+            alt="Calm natural landscape with soft light and greenery" />
         </div>
       </div>
     </div>
@@ -114,9 +113,7 @@
           <span>email-driven revenue lift</span>
         </div>
       </div>
-      <p class="muted center narrow" style="margin-top:.75rem;">
-        Figures shown are representative outcomes from recent client sprints. Exact results vary by offer and channel mix.
-      </p>
+      <p class="muted center narrow" style="margin-top:.75rem;">Figures shown are representative outcomes from recent client sprints. Exact results vary by offer and channel mix.</p>
     </div>
   </section>
 
@@ -124,43 +121,25 @@
   <section class="section section-sand">
     <div class="container">
       <h2>Snapshots from recent work</h2>
-
       <div class="cards">
-        <!-- Case 1 -->
         <article class="card">
-          <img
-            class="media"
-            src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1200&q=80"
-            alt="SEO traffic growth chart on a screen"
-            width="1200" height="800" loading="lazy" decoding="async" />
+          <img class="media" src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1200&q=80" alt="SEO traffic growth chart" width="1200" height="800" loading="lazy" decoding="async" />
           <div class="card-body">
             <h3>SEO content system for DTC</h3>
             <p>+62% qualified clicks in 8 weeks from 8 long-form hubs and internal linking.</p>
             <a href="portfolio.html#seo" class="btn btn-outline">See breakdown</a>
           </div>
         </article>
-
-        <!-- Case 2 -->
         <article class="card">
-          <img
-            class="media"
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
-            alt="Paid media dashboard with charts"
-            width="1200" height="800" loading="lazy" decoding="async" />
+          <img class="media" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Ads dashboard with charts" width="1200" height="800" loading="lazy" decoding="async" />
           <div class="card-body">
             <h3>Paid social sprint</h3>
             <p>3.1× blended ROAS using UGC variants + interest stacks with weekly optimizations.</p>
             <a href="portfolio.html#ads" class="btn btn-outline">What we tested</a>
           </div>
         </article>
-
-        <!-- Case 3 -->
         <article class="card">
-          <img
-            class="media"
-            src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80"
-            alt="Email automation workspace"
-            width="1200" height="800" loading="lazy" decoding="async" />
+          <img class="media" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="Email automation workspace" width="1200" height="800" loading="lazy" decoding="async" />
           <div class="card-body">
             <h3>Email flows</h3>
             <p>+38% repeat revenue with welcome, browse-abandon, and winback flows.</p>
@@ -204,7 +183,6 @@
             <a href="services.html" class="btn btn-outline">Explore services</a>
           </div>
         </div>
-
         <div class="split-col">
           <img
             class="media"
@@ -226,27 +204,22 @@
   <section class="section">
     <div class="container">
       <h2>FAQ</h2>
-
       <details>
         <summary>Who is this for?</summary>
         <p>Founders and lean teams who want compounding growth without gimmicks.</p>
       </details>
-
       <details>
         <summary>What does it cost?</summary>
         <p>Most retainers land <strong>$1.2k–$3.5k/mo</strong> depending on scope. Fixed-fee strategy sprints available.</p>
       </details>
-
       <details>
         <summary>How fast will we see results?</summary>
         <p>Paid channels: 2–4 weeks. SEO & email: 6–12 weeks to consistent lift, compounding after.</p>
       </details>
-
       <details>
         <summary>What do you need from us?</summary>
         <p>Access to analytics/ads/ESP, brand guidelines, and one async check-in per week.</p>
       </details>
-
       <details>
         <summary>Can we start with a small project first?</summary>
         <p>Yes—book a 2-week strategy sprint; fee is credited toward a retainer if we continue.</p>
@@ -299,8 +272,6 @@
   }
   </script>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
