@@ -5,10 +5,10 @@
   --stone:#2b2a28;       /* header/footer */
   --fern:#2d6a4f;        /* green CTA */
   --fern-600:#255740;
-  --clay:#6b4226;        /* primary CTA */
+  --clay:#6b4226;        /* primary brown */
   --clay-700:#4e2f1b;
   --sand:#f4efe8;        /* warm background */
-  --wheat:#e9e2d8;       /* alt section */
+  --wheat:#e9e2d8;
   --cream:#f8f6f2;
   --cloud:#eef0f2;
   --white:#fff;
@@ -61,9 +61,10 @@ a{text-decoration:none;color:inherit}
   transition:transform .06s ease, background .2s ease, box-shadow .2s ease;
 }
 .btn:hover{transform:translateY(-1px); background:var(--clay-700)}
-/* Outline button for dark backgrounds (hero/header) */
+
+/* Outline (default for “See examples” inside cards) */
 .btn-outline{background:transparent;border:2px solid #fff;color:#fff}
-/* Primary green */
+/* Primary green (default second CTA) */
 .btn-green{background:var(--fern)}
 .btn-green:hover{background:var(--fern-600)}
 
@@ -93,17 +94,24 @@ a{text-decoration:none;color:inherit}
 }
 .cta-row{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
 
-/* ---------- Why ---------- */
-.prose p{max-width:62ch}
-.checks{list-style:none;padding:0;margin:1rem 0 0}
-.checks li{position:relative;padding-left:1.2rem;margin:.55rem 0}
-.checks li::before{content:"✔";position:absolute;left:0;color:var(--fern);font-weight:900}
-.figure{border-radius:1rem;overflow:hidden;box-shadow:var(--shadow)}
-
 /* ---------- Services ---------- */
-.cards{display:grid;gap:1.1rem;grid-template-columns:repeat(4,1fr)}
-@media (max-width: 1100px){ .cards{grid-template-columns:repeat(2,1fr)} }
-@media (max-width: 640px){ .cards{grid-template-columns:1fr} }
+/* Five across on large screens */
+.cards{
+  display:grid;
+  gap:2rem;
+  grid-template-columns:repeat(5, 1fr);
+}
+
+/* Responsive fallbacks */
+@media (max-width: 1200px){
+  .cards{ grid-template-columns:repeat(3, 1fr); }
+}
+@media (max-width: 768px){
+  .cards{ grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width: 500px){
+  .cards{ grid-template-columns:1fr; }
+}
 
 .card{
   background:var(--white);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);
@@ -114,22 +122,30 @@ a{text-decoration:none;color:inherit}
 
 .card img{height:220px;object-fit:cover;width:100%}
 .card-body{padding:1.1rem;flex:1;display:flex;flex-direction:column}
-.card h3{margin:.1rem 0 .4rem;color:var(--clay)}
+.card h3{margin:.25rem 0 .5rem;color:var(--clay)}
 .card p{color:#2f2a25;margin:.4rem 0;max-width:60ch}
 
 .bullets{list-style:none;padding:0;margin:.4rem 0 1rem}
 .bullets li{position:relative;padding-left:1.1rem;margin:.28rem 0}
 .bullets li::before{content:"•";position:absolute;left:0;color:var(--fern);font-weight:900}
 
-.actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:auto}
+.actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:auto}
+.actions .btn{min-width:160px}
 
-/* Make outline buttons visible on white cards while keeping hero/header white outline */
+/* Outline buttons inside cards should be brown, not white */
 .card .btn-outline{
   border:2px solid var(--clay);
   color:var(--clay);
   background:transparent;
+  box-shadow:none;
 }
-.card .btn-outline:hover{ background:var(--clay); color:#fff; }
+.card .btn-outline:hover{ background:var(--clay); color:#fff }
+
+/* Stack CTAs on small screens */
+@media (max-width:640px){
+  .actions{flex-direction:column}
+  .actions .btn{width:100%; text-align:center}
+}
 
 /* ---------- Portfolio ---------- */
 .pf-grid{display:grid;gap:1.1rem;grid-template-columns:repeat(3,1fr)}
