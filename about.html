@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Why Natural Edge | About Us — Research-backed, clean creative growth</title>
-  <meta name="description" content="Natural Edge Media blends research-backed strategy with clean, modern creative. We build long-term growth systems—without gimmicks." />
+  <title>Why Natural Edge | About Us — Research-backed strategy + clean creative</title>
+  <meta name="description" content="Natural Edge Media helps founders and small teams grow with research-backed strategy and clean creative across SEO, social, email, and ads—no gimmicks, just systems that compound." />
   <link rel="canonical" href="https://my-website.vercel.app/about.html" />
 
   <!-- Open Graph -->
@@ -13,14 +13,34 @@
   <meta property="og:description" content="Research-backed strategy, minimal modern design, and SEO foundations that compound month over month." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://my-website.vercel.app/about.html" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Your site stylesheet -->
+  <!-- Site CSS -->
   <link rel="stylesheet" href="styles.css?v=12" />
+
+  <!-- Small, safe polish that won’t fight your CSS -->
+  <style>
+    /* Grid helpers (use only if not already defined in styles.css) */
+    .split{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center}
+    @media (max-width: 960px){.split{grid-template-columns:1fr}}
+    .actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;text-align:center}
+    @media (max-width: 900px){.stats{grid-template-columns:1fr}}
+    .stat strong{display:block;font-size:2rem;line-height:1}
+    .timeline{counter-reset:step;display:grid;gap:.75rem}
+    .timeline li{list-style:none;padding-left:1.75rem;position:relative}
+    .timeline li::before{counter-increment:step;content:counter(step, decimal-leading-zero);position:absolute;left:0;top:0;color:#8a6a43;font-weight:700}
+    details{border:1px solid #eee;border-radius:12px;padding:.75rem 1rem;background:#fff}
+    details+details{margin-top:.6rem}
+    .muted{opacity:.75}
+    .center{text-align:center}
+    .narrow{max-width:760px;margin-inline:auto}
+    .media{border-radius:14px;overflow:hidden}
+  </style>
 </head>
 <body>
-  <!-- Header (same structure as other pages) -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header">
       <a class="brand" href="index.html">Natural Edge <span>Media</span></a>
@@ -36,15 +56,16 @@
     </div>
   </header>
 
-  <!-- Hero / Why Natural Edge -->
+  <!-- WHY / TOP SECTION -->
   <section class="section section-sand">
     <div class="container">
       <div class="split">
         <div class="split-col">
           <h1>Why Natural Edge?</h1>
           <p class="lead">
-            Marketing should feel like an extension of your values—never a gimmick. We build
-            long-term growth engines with strategy, storytelling, and design that respect your audience.
+            We help <strong>founders and small teams</strong> grow with
+            <strong>research-backed strategy</strong> and <strong>clean creative</strong>—no gimmicks,
+            just systems that compound.
           </p>
           <ul class="bullets">
             <li><strong>Research-backed strategy</strong> tailored to your stage</li>
@@ -52,112 +73,166 @@
             <li><strong>SEO foundations</strong> that compound month over month</li>
           </ul>
           <div class="actions">
-            <a href="services.html" class="btn btn-green">Explore services</a>
-            <a href="contact.html" class="btn btn-outline">Get a proposal</a>
+            <a href="contact.html" class="btn btn-green">Get a 15-min audit</a>
+            <a href="portfolio.html" class="btn btn-outline">See proof of work</a>
           </div>
         </div>
         <div class="split-col">
+          <!-- Real, relevant photo (workspace / planning) -->
           <img
-            src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80"
-            alt="Clean creative workspace with notebook, laptop, and warm light"
-            width="1600" height="1066" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+            class="media"
+            src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80"
+            srcset="
+              https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&q=80 800w,
+              https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80 1200w,
+              https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80 1600w
+            "
+            sizes="(min-width: 1024px) 42vw, 100vw"
+            width="1600" height="1066" loading="eager" fetchpriority="high"
+            alt="Clean creative workspace with notebook, laptop, and warm light" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What makes us different -->
+  <!-- PROOF STRIP -->
   <section class="section">
     <div class="container">
-      <h2>What makes us different</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="card-body">
-            <h3>Principles over hacks</h3>
-            <p>We ship durable systems—content, funnels, and creative that keep working after trends fade.</p>
-          </div>
+      <h2>Results at a glance</h2>
+      <div class="stats">
+        <div class="stat">
+          <strong>+78%</strong>
+          <span>organic traffic in 90 days</span>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h3>Clarity first</h3>
-            <p>No jargon. Straightforward plans, clear copy, and clean design that customers trust.</p>
-          </div>
+        <div class="stat">
+          <strong>3.2×</strong>
+          <span>ad ROAS by month two</span>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h3>Relentless iteration</h3>
-            <p>We review monthly, measure what matters, and tighten the plan so results compound.</p>
-          </div>
+        <div class="stat">
+          <strong>+42%</strong>
+          <span>email-driven revenue lift</span>
         </div>
       </div>
+      <p class="muted center narrow" style="margin-top:.75rem;">Figures shown are representative outcomes from recent client sprints. Exact results vary by offer and channel mix.</p>
     </div>
   </section>
 
-  <!-- Process -->
+  <!-- MINI CASES -->
   <section class="section section-sand">
     <div class="container">
-      <h2>Our process</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>01 • Discovery</h4>
-          <p>Audience, offer, positioning. We map goals and constraints to set guardrails.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>02 • Strategy</h4>
-          <p>Channel plan across SEO, social, email, and ads with a 90-day roadmap.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>03 • Build</h4>
-          <p>Content systems, tracking, and creative baselines. We launch fast without mess.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>04 • Optimize</h4>
-          <p>Monthly review, experiments, and compounding improvements.</p>
-        </div>
+      <h2>Snapshots from recent work</h2>
+      <div class="cards">
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1200&q=80" alt="SEO traffic growth chart" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>SEO content system for DTC</h3>
+            <p>+62% qualified clicks in 8 weeks from 8 long-form hubs and internal linking.</p>
+            <a href="portfolio.html#seo" class="btn btn-outline">See breakdown</a>
+          </div>
+        </article>
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Ads dashboard with charts" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Paid social sprint</h3>
+            <p>3.1× blended ROAS using UGC variants + interest stacks with weekly optimizations.</p>
+            <a href="portfolio.html#ads" class="btn btn-outline">What we tested</a>
+          </div>
+        </article>
+        <article class="card">
+          <img class="media" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="Email automation workspace" width="1200" height="800" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h3>Email flows</h3>
+            <p>+38% repeat revenue with welcome, browse-abandon, and winback flows.</p>
+            <a href="portfolio.html#email" class="btn btn-outline">See flows</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Founder / small team -->
+  <!-- PROCESS -->
   <section class="section">
+    <div class="container">
+      <h2>How we work</h2>
+      <ol class="timeline">
+        <li><strong>Discovery</strong> — audience, offer, positioning, and constraints.</li>
+        <li><strong>Strategy</strong> — 90-day plan across SEO, social, email, and ads.</li>
+        <li><strong>Build</strong> — content systems, tracking, and creative baselines.</li>
+        <li><strong>Optimize</strong> — monthly review, experiments, and iteration.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="section section-sand">
     <div class="container">
       <div class="split">
         <div class="split-col">
           <h2>Small team, senior attention</h2>
           <p>
-            Natural Edge Media is a lean studio. You work directly with the people doing the work—no bloated
-            account layers, no hand-offs. That’s how we stay fast, consistent, and affordable.
+            I’m Lucas, founder of Natural Edge. I started this studio to help small teams grow without the hype.
+            You work directly with the people doing the work—no bloated layers, no hand-offs.
           </p>
           <ul class="bullets">
             <li>Direct Slack + monthly review call</li>
             <li>Clear dashboards and one-page plans</li>
             <li>Flexible scope as you grow</li>
           </ul>
+          <div class="actions">
+            <a href="contact.html" class="btn btn-green">Work with me</a>
+            <a href="services.html" class="btn btn-outline">Explore services</a>
+          </div>
         </div>
         <div class="split-col">
           <img
-            src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80"
-            alt="Founder working with client notes and analytics on screen"
-            width="1600" height="1066" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+            class="media"
+            src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80"
+            srcset="
+              https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80 800w,
+              https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80 1200w,
+              https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80 1600w
+            "
+            sizes="(min-width: 1024px) 38vw, 100vw"
+            width="1200" height="1500" loading="lazy" decoding="async"
+            alt="Founder working with client notes and analytics on screen" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Trust / logos (placeholder row you can replace later) -->
-  <section class="section section-sand">
-    <div class="container center narrow">
-      <h2>Trusted for calm, consistent growth</h2>
-      <p class="muted">Logos coming soon—ask for our portfolio to see live work.</p>
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Who is this for?</summary>
+        <p>Founders and lean teams who want compounding growth without gimmicks.</p>
+      </details>
+      <details>
+        <summary>What does it cost?</summary>
+        <p>Most retainers land <strong>$1.2k–$3.5k/mo</strong> depending on scope. Fixed-fee strategy sprints available.</p>
+      </details>
+      <details>
+        <summary>How fast will we see results?</summary>
+        <p>Paid channels: 2–4 weeks. SEO & email: 6–12 weeks to consistent lift, compounding after.</p>
+      </details>
+      <details>
+        <summary>What do you need from us?</summary>
+        <p>Access to analytics/ads/ESP, brand guidelines, and one async check-in per week.</p>
+      </details>
+      <details>
+        <summary>Can we start with a small project first?</summary>
+        <p>Yes—book a 2-week strategy sprint; fee is credited toward a retainer if we continue.</p>
+      </details>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="section">
+  <section class="section section-sand">
     <div class="container center narrow">
-      <h2>Ready to grow with less noise?</h2>
-      <p class="lead">Tell us your goals. We’ll send a short plan with options and pricing.</p>
-      <div class="actions">
+      <h2>Ready to grow—calmly?</h2>
+      <p class="lead">Tell us your goals. We’ll send a short plan with options and transparent pricing.</p>
+      <div class="actions" style="justify-content:center">
         <a href="contact.html" class="btn btn-green">Get a free growth plan</a>
         <a href="services.html" class="btn btn-outline">See what we do</a>
       </div>
@@ -174,16 +249,26 @@
     </div>
   </footer>
 
-  <!-- JSON-LD -->
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Natural Edge Media",
     "url": "https://my-website.vercel.app/",
+    "description": "Research-backed strategy and clean creative that compounds growth.",
     "logo": "https://my-website.vercel.app/favicon.png",
-    "sameAs": [],
-    "description": "Research-backed strategy and clean creative that compounds growth."
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Lucas Porter",
+    "jobTitle":"Founder",
+    "worksFor":{"@type":"Organization","name":"Natural Edge Media"},
+    "url":"https://my-website.vercel.app/about.html"
   }
   </script>
 
