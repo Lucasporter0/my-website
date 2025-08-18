@@ -1,185 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services • Natural Edge Media</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root { --ink:#1f1f1f; --sand:#f3eee7; --accent:#8a6a43; }
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; }
-  </style>
+
+  <title>Natural Edge Media — Services</title>
+  <meta name="description" content="SEO Boost, Social Growth, Email Flows, Advertisements, and Full-Funnel Strategy by Natural Edge Media. Strategy-first, earth-toned design, and sustainable growth systems." />
+  <link rel="canonical" href="https://my-website.vercel.app/services.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Natural Edge Media — Services" />
+  <meta property="og:description" content="SEO, social growth, email flows, paid ads, and full-funnel strategy for sustainable, long-term results." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://my-website.vercel.app/services.html" />
+  <meta property="og:image" content="images/funnel.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Your site styles -->
+  <link rel="stylesheet" href="styles.css?v=16" />
 </head>
-<body class="bg-[var(--sand)] text-[var(--ink)]">
+<body>
   <!-- Header -->
-  <header class="border-b border-black/10 bg-white/70 backdrop-blur">
-    <div class="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
-      <a href="/" class="font-extrabold tracking-tight text-xl">Natural Edge Media</a>
-      <nav class="hidden sm:flex gap-6 text-sm">
-        <a href="/" class="hover:opacity-70">Home</a>
-        <a href="/services.html" class="font-semibold text-[var(--accent)]">Services</a>
-        <a href="/#work" class="hover:opacity-70">Work</a>
-        <a href="/#contact" class="hover:opacity-70">Contact</a>
+  <header class="site-header">
+    <div class="container header">
+      <a class="brand" href="index.html">Natural Edge <span>Media</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Why Us</a></li>
+          <li><a class="active" href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a class="btn btn-small" href="contact.html">Contact</a></li>
+        </ul>
       </nav>
-      <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-[var(--ink)] px-4 py-2 text-white text-sm">Get a Proposal</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="mx-auto max-w-6xl px-6 pt-12 pb-4">
-    <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">Services built to compound growth</h1>
-    <p class="mt-3 text-lg sm:max-w-3xl">
-      We blend research-driven strategy with clean, creative execution—so you can focus on running the business while we build momentum.
-    </p>
-  </section>
+  <!-- Services -->
+  <section class="section section-sand">
+    <div class="container center narrow">
+      <h1>Services</h1>
+      <p class="lead">Choose the lane that fits your goals. We’ll tailor the plan and handle execution so you can focus on growth.</p>
+    </div>
 
-  <!-- Services Grid -->
-  <section class="mx-auto max-w-6xl px-6 pb-16">
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-      <!-- CARD TEMPLATE NOTE:
-           Replace the image src with your local files when ready (e.g. /images/services/seo.jpg). Keep the sizes/alt attributes. -->
-
+    <div class="container cards">
       <!-- SEO Boost -->
-      <article class="rounded-2xl bg-white shadow-sm ring-1 ring-black/5 overflow-hidden flex flex-col">
-        <div class="aspect-[4/3] overflow-hidden bg-neutral-100">
-          <img
-            src="https://source.unsplash.com/800x600/?seo,analytics"
-            alt="SEO analytics and code workspace"
-            loading="lazy"
-            class="h-full w-full object-cover" />
-        </div>
-        <div class="p-5 flex flex-col gap-3">
-          <h2 class="text-xl font-extrabold">SEO Boost</h2>
-          <p class="text-sm leading-relaxed">
-            Keyword research + optimized content to grow qualified organic traffic and compound results over time.
-          </p>
-          <ul class="mt-1 space-y-1 text-sm">
-            <li>• 4 keyword articles / month</li>
-            <li>• On-page SEO & internal links</li>
-            <li>• Editorial calendar & briefs</li>
+      <article class="card">
+        <img src="images/seo.jpg" alt="SEO analytics and code workspace representing search optimization" loading="lazy" decoding="async" />
+        <div class="card-body">
+          <h3>SEO Boost</h3>
+          <p>Keyword research + optimized content to grow qualified organic traffic and compound results over time.</p>
+          <ul class="bullets">
+            <li>4 keyword articles / month</li>
+            <li>On-page SEO &amp; internal links</li>
+            <li>Editorial calendar &amp; briefs</li>
           </ul>
+          <div class="actions">
+            <a href="portfolio.html#seo" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Get a plan</a>
+          </div>
         </div>
       </article>
 
       <!-- Social Growth -->
-      <article class="rounded-2xl bg-white shadow-sm ring-1 ring-black/5 overflow-hidden flex flex-col">
-        <div class="aspect-[4/3] overflow-hidden bg-neutral-100">
-          <img
-            src="https://source.unsplash.com/800x600/?content,planning,social-media"
-            alt="Planning session for social media content"
-            loading="lazy"
-            class="h-full w-full object-cover" />
-        </div>
-        <div class="p-5 flex flex-col gap-3">
-          <h2 class="text-xl font-extrabold">Social Growth</h2>
-          <p class="text-sm leading-relaxed">
-            On-brand posts and short-form video that build community and reach without gimmicks.
-          </p>
-          <ul class="mt-1 space-y-1 text-sm">
-            <li>• 12 posts / month (Reels, carousels, static)</li>
-            <li>• Hooks, captions, and calendar</li>
-            <li>• Light engagement guidance</li>
+      <article class="card">
+        <img src="images/social.jpg" alt="Content planning session for social media growth" loading="lazy" decoding="async" />
+        <div class="card-body">
+          <h3>Social Growth</h3>
+          <p>On-brand posts and short-form video that build community and reach without gimmicks.</p>
+          <ul class="bullets">
+            <li>12 posts / month (Reels, carousels, static)</li>
+            <li>Hooks, captions, and calendar</li>
+            <li>Light engagement guidance</li>
           </ul>
+          <div class="actions">
+            <a href="portfolio.html#social" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Plan my social</a>
+          </div>
         </div>
       </article>
 
       <!-- Email Flows -->
-      <article class="rounded-2xl bg-white shadow-sm ring-1 ring-black/5 overflow-hidden flex flex-col">
-        <div class="aspect-[4/3] overflow-hidden bg-neutral-100">
-          <img
-            src="https://source.unsplash.com/800x600/?email,marketing,automation"
-            alt="Phone and laptop showing email marketing workflow"
-            loading="lazy"
-            class="h-full w-full object-cover" />
-        </div>
-        <div class="p-5 flex flex-col gap-3">
-          <h2 class="text-xl font-extrabold">Email Flows</h2>
-          <p class="text-sm leading-relaxed">
-            Lifecycle sequences and newsletters that convert without being pushy—designed to welcome, nurture, and re-engage.
-          </p>
-          <ul class="mt-1 space-y-1 text-sm">
-            <li>• Welcome, nurture, promo flows</li>
-            <li>• Copy + light design in your ESP</li>
-            <li>• Deliverability guidance</li>
+      <article class="card">
+        <img src="images/email.jpg" alt="Phone and laptop showing email marketing workflow" loading="lazy" decoding="async" />
+        <div class="card-body">
+          <h3>Email Flows</h3>
+          <p>Lifecycle sequences and newsletters that convert without being pushy—designed to welcome, nurture, and re-engage.</p>
+          <ul class="bullets">
+            <li>Welcome, nurture, promo flows</li>
+            <li>Copy + light design in your ESP</li>
+            <li>Deliverability hygiene</li>
           </ul>
+          <div class="actions">
+            <a href="portfolio.html#email" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Audit my flows</a>
+          </div>
         </div>
       </article>
 
       <!-- Advertisements -->
-      <article class="rounded-2xl bg-white shadow-sm ring-1 ring-black/5 overflow-hidden flex flex-col">
-        <div class="aspect-[4/3] overflow-hidden bg-neutral-100">
-          <img
-            src="https://source.unsplash.com/800x600/?digital,ads,marketing"
-            alt="3D illustration of mobile ads, cards, and dashboards"
-            loading="lazy"
-            class="h-full w-full object-cover" />
-        </div>
-        <div class="p-5 flex flex-col gap-3">
-          <h2 class="text-xl font-extrabold">Advertisements</h2>
-          <p class="text-sm leading-relaxed">
-            Conversion-focused paid campaigns across Meta, Google, and TikTok—built on strong creative, tight targeting, and clear reporting.
-          </p>
-          <ul class="mt-1 space-y-1 text-sm">
-            <li>• Account + pixel/GA4 setup</li>
-            <li>• Creative testing & audiences</li>
-            <li>• Weekly optimizations & reports</li>
+      <article class="card">
+        <img src="images/ads.jpg" alt="3D illustration of mobile ads, card and discount for digital advertising" loading="lazy" decoding="async" />
+        <div class="card-body">
+          <h3>Advertisements</h3>
+          <p>Conversion-focused paid campaigns across Meta, Google, and TikTok—built on strong creative, tight targeting, and clear reporting.</p>
+          <ul class="bullets">
+            <li>Account + pixel/GA4 setup</li>
+            <li>Creative testing &amp; audiences</li>
+            <li>Weekly optimization &amp; reporting</li>
           </ul>
+          <div class="actions">
+            <a href="portfolio.html#ads" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Run my ads</a>
+          </div>
         </div>
       </article>
 
       <!-- Full-Funnel Strategy -->
-      <article class="rounded-2xl bg-white shadow-sm ring-1 ring-black/5 overflow-hidden flex flex-col">
-        <div class="aspect-[4/3] overflow-hidden bg-neutral-100">
-          <img
-            src="https://source.unsplash.com/800x600/?analytics,dashboard,marketing"
-            alt="Analytics dashboard showing full-funnel performance"
-            loading="lazy"
-            class="h-full w-full object-cover" />
-        </div>
-        <div class="p-5 flex flex-col gap-3">
-          <h2 class="text-xl font-extrabold">Full-Funnel Strategy</h2>
-          <p class="text-sm leading-relaxed">
-            Integrated plan across SEO, social, email, and ads with monthly reporting and iterative improvements.
-          </p>
-          <ul class="mt-1 space-y-1 text-sm">
-            <li>• Unified content system</li>
-            <li>• Top/Mid/Bottom-funnel mapping</li>
-            <li>• Monthly review & iteration</li>
+      <article class="card">
+        <img src="images/funnel.jpg" alt="Analytics dashboard showing full-funnel performance metrics" loading="lazy" decoding="async" />
+        <div class="card-body">
+          <h3>Full-Funnel Strategy</h3>
+          <p>Integrated plan across SEO, social, email, and ads with monthly reporting and iterative improvements.</p>
+          <ul class="bullets">
+            <li>Unified content system</li>
+            <li>Top/Mid/Bottom-funnel mapping</li>
+            <li>Monthly review &amp; next steps</li>
           </ul>
+          <div class="actions">
+            <a href="portfolio.html#funnel" class="btn btn-outline">See examples</a>
+            <a href="contact.html" class="btn btn-green">Build my funnel</a>
+          </div>
         </div>
       </article>
     </div>
-
-    <!-- CTA -->
-    <div class="mt-10 flex flex-col items-center gap-3">
-      <a href="#contact" class="inline-flex items-center rounded-xl bg-[var(--accent)] px-6 py-3 text-white font-semibold">
-        Get a free growth audit
-      </a>
-      <p class="text-sm opacity-80">2–3 business days • no obligation</p>
-    </div>
   </section>
 
-  <!-- Contact Anchor (simple) -->
-  <section id="contact" class="bg-white/70 border-t border-black/10">
-    <div class="mx-auto max-w-3xl px-6 py-12">
-      <h3 class="text-2xl font-extrabold">Tell us about your goals</h3>
-      <form action="https://formspree.io/f/your-id" method="POST" class="mt-6 grid gap-4">
-        <input class="rounded-xl border border-neutral-300 bg-white p-3 outline-none" name="name" placeholder="Your name" required>
-        <input class="rounded-xl border border-neutral-300 bg-white p-3 outline-none" name="email" type="email" placeholder="Email" required>
-        <input class="rounded-xl border border-neutral-300 bg-white p-3 outline-none" name="website" placeholder="Your website or @handle">
-        <textarea class="rounded-xl border border-neutral-300 bg-white p-3 outline-none min-h-28" name="message" placeholder="What are you trying to grow?" required></textarea>
-        <button class="rounded-xl bg-[var(--ink)] text-white px-5 py-3 font-semibold">Send</button>
-      </form>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer">
+      <p>© <span id="year"></span> Natural Edge Media</p>
+      <nav aria-label="Footer">
+        <a href="services.html">Services</a> · <a href="portfolio.html">Portfolio</a> · <a href="contact.html">Contact</a>
+      </nav>
     </div>
-  </section>
-
-  <footer class="py-8 text-center text-sm opacity-70">
-    © <span id="y"></span> Natural Edge Media. All rights reserved.
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://my-website.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://my-website.vercel.app/services.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  [{
+    "@context":"https://schema.org","@type":"Service","name":"SEO Boost",
+    "provider":{"@type":"Organization","name":"Natural Edge Media"},
+    "description":"Keyword research and optimized content to increase qualified organic traffic.",
+    "serviceType":"Search Engine Optimization","areaServed":"Global"
+  },{
+    "@context":"https://schema.org","@type":"Service","name":"Social Growth",
+    "provider":{"@type":"Organization","name":"Natural Edge Media"},
+    "description":"On-brand social content and short-form video to build community and reach.",
+    "serviceType":"Social Media Marketing","areaServed":"Global"
+  },{
+    "@context":"https://schema.org","@type":"Service","name":"Email Flows",
+    "provider":{"@type":"Organization","name":"Natural Edge Media"},
+    "description":"Lifecycle email sequences and newsletters that convert and retain customers.",
+    "serviceType":"Email Marketing","areaServed":"Global"
+  },{
+    "@context":"https://schema.org","@type":"Service","name":"Advertisements",
+    "provider":{"@type":"Organization","name":"Natural Edge Media"},
+    "description":"Conversion-focused paid campaigns across Meta, Google, and TikTok with creative testing and weekly optimization.",
+    "serviceType":"Digital Advertising","areaServed":"Global"
+  },{
+    "@context":"https://schema.org","@type":"Service","name":"Full-Funnel Strategy",
+    "provider":{"@type":"Organization","name":"Natural Edge Media"},
+    "description":"Integrated cross-channel growth strategy with monthly reporting and iterative improvements.",
+    "serviceType":"Marketing Strategy","areaServed":"Global"
+  }]
+  </script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
