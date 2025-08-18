@@ -4,17 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Why Natural Edge | About Us — Research-backed strategy + clean creative</title>
-  <meta name="description" content="Natural Edge Media helps founders and small teams grow with research-backed strategy and clean creative across SEO, social, email, and ads—no gimmicks, just systems that compound." />
+  <!-- Basic SEO -->
+  <title>About Natural Edge Media | Research-Backed Strategy for SEO, Social, Email & Ads</title>
+  <meta name="description" content="Natural Edge Media helps founders and small teams grow with clear strategy and creative direction across SEO, paid ads, email, and social. No gimmicks—just systems that compound." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://my-website.vercel.app/about.html" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="About Natural Edge Media" />
-  <meta property="og:description" content="Research-backed strategy, minimal modern design, and SEO foundations that compound month over month." />
+  <meta property="og:description" content="Research-backed growth systems across SEO, social, email, and ads—built to compound month after month." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://my-website.vercel.app/about.html" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80" />
+  <meta property="og:image:alt" content="Serene natural landscape representing calm, sustainable growth." />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (optional; adjust to your path) -->
+  <link rel="icon" href="/favicon.png" type="image/png" />
+
+  <!-- Performance hint: preload the hero image -->
+  <link rel="preload" as="image"
+        imagesrcset="
+          https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80 800w,
+          https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80 1200w,
+          https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80 1600w"
+        imagesizes="(min-width: 1024px) 42vw, 100vw"
+        href="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" />
 
   <!-- Site CSS -->
   <link rel="stylesheet" href="styles.css?v=12" />
@@ -41,7 +56,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container header">
       <a class="brand" href="index.html">Natural Edge <span>Media</span></a>
       <nav aria-label="Primary">
@@ -57,15 +72,14 @@
   </header>
 
   <!-- WHY / TOP SECTION -->
-  <section class="section section-sand">
+  <section class="section section-sand" aria-labelledby="why-heading">
     <div class="container">
       <div class="split">
         <div class="split-col">
-          <h1>Why Natural Edge?</h1>
+          <h1 id="why-heading">About Natural Edge Media</h1>
           <p class="lead">
             We help <strong>founders and small teams</strong> grow with
-            <strong>clear strategy</strong> and <strong>creative direction</strong>—no gimmicks,
-            just systems that move you forward.
+            <strong>clear strategy</strong> and <strong>creative direction</strong> across SEO, paid ads, email, and social—no gimmicks, just systems that move you forward.
           </p>
           <ul class="bullets">
             <li><strong>Research-backed strategy</strong> tailored to your growth stage</li>
@@ -73,12 +87,15 @@
             <li><strong>Sustainable foundations</strong> that compound month after month</li>
           </ul>
           <div class="actions">
-            <a href="contact.html" class="btn btn-green">Get a 15-min audit</a>
+            <a href="contact.html" class="btn btn-green" aria-label="Get a 15 minute audit of your marketing">Get a 15-min audit</a>
             <a href="portfolio.html" class="btn btn-outline">See proof of work</a>
           </div>
+          <p class="muted" style="margin-top:.5rem">
+            New here? Explore our <a href="services.html" class="inline-link">full-funnel services</a> or jump to <a href="portfolio.html" class="inline-link">case studies</a>.
+          </p>
         </div>
         <div class="split-col">
-          <!-- Nature hero image -->
+          <!-- Nature hero image (keyworded alt, explicit size for CLS) -->
           <img
             class="media"
             src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
@@ -89,26 +106,26 @@
             "
             sizes="(min-width: 1024px) 42vw, 100vw"
             width="1600" height="1066" loading="eager" fetchpriority="high"
-            alt="Calm natural landscape with soft light and greenery" />
+            alt="Natural landscape symbolizing sustainable, momentum-based growth" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- PROOF STRIP -->
-  <section class="section">
+  <section class="section" aria-labelledby="results-heading">
     <div class="container">
-      <h2>Results at a glance</h2>
-      <div class="stats">
-        <div class="stat">
+      <h2 id="results-heading">Results at a glance</h2>
+      <div class="stats" role="list">
+        <div class="stat" role="listitem">
           <strong>+78%</strong>
           <span>organic traffic in 90 days</span>
         </div>
-        <div class="stat">
+        <div class="stat" role="listitem">
           <strong>3.2×</strong>
           <span>ad ROAS by month two</span>
         </div>
-        <div class="stat">
+        <div class="stat" role="listitem">
           <strong>+42%</strong>
           <span>email-driven revenue lift</span>
         </div>
@@ -118,20 +135,20 @@
   </section>
 
   <!-- MINI CASES -->
-  <section class="section section-sand">
+  <section class="section section-sand" aria-labelledby="snapshots-heading">
     <div class="container">
-      <h2>Snapshots from recent work</h2>
+      <h2 id="snapshots-heading">Snapshots from recent work</h2>
       <div class="cards">
         <article class="card">
-          <img class="media" src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1200&q=80" alt="SEO traffic growth chart" width="1200" height="800" loading="lazy" decoding="async" />
+          <img class="media" src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1200&q=80" alt="SEO traffic growth chart on analytics dashboard" width="1200" height="800" loading="lazy" decoding="async" />
           <div class="card-body">
             <h3>SEO content system for DTC</h3>
             <p>+62% qualified clicks in 8 weeks from 8 long-form hubs and internal linking.</p>
-            <a href="portfolio.html#seo" class="btn btn-outline">See breakdown</a>
+            <a href="portfolio.html#seo" class="btn btn-outline" aria-label="See the SEO content system breakdown">See breakdown</a>
           </div>
         </article>
         <article class="card">
-          <img class="media" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Ads dashboard with charts" width="1200" height="800" loading="lazy" decoding="async" />
+          <img class="media" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Ads performance dashboard with charts and KPIs" width="1200" height="800" loading="lazy" decoding="async" />
           <div class="card-body">
             <h3>Paid social sprint</h3>
             <p>3.1× blended ROAS using UGC variants + interest stacks with weekly optimizations.</p>
@@ -139,10 +156,10 @@
           </div>
         </article>
         <article class="card">
-          <img class="media" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="Email automation workspace" width="1200" height="800" loading="lazy" decoding="async" />
+          <img class="media" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="Email marketing workspace and flow diagram" width="1200" height="800" loading="lazy" decoding="async" />
           <div class="card-body">
             <h3>Email flows</h3>
-            <p>+38% repeat revenue with welcome, browse-abandon, and winback flows.</p>
+            <p>+38% repeat revenue with welcome, browse-abandon, and winback automations.</p>
             <a href="portfolio.html#email" class="btn btn-outline">See flows</a>
           </div>
         </article>
@@ -151,9 +168,9 @@
   </section>
 
   <!-- PROCESS -->
-  <section class="section">
+  <section class="section" aria-labelledby="process-heading">
     <div class="container">
-      <h2>How we work</h2>
+      <h2 id="process-heading">How we work</h2>
       <ol class="timeline">
         <li><strong>Discovery</strong> — audience, offer, positioning, and constraints.</li>
         <li><strong>Strategy</strong> — 90-day plan across SEO, social, email, and ads.</li>
@@ -164,11 +181,11 @@
   </section>
 
   <!-- FOUNDER -->
-  <section class="section section-sand">
+  <section class="section section-sand" aria-labelledby="founder-heading">
     <div class="container">
       <div class="split">
         <div class="split-col">
-          <h2>Small team, senior attention</h2>
+          <h2 id="founder-heading">Small team, senior attention</h2>
           <p>
             I’m Lucas, founder of Natural Edge. I started this studio to help small teams grow without the hype.
             You work directly with the people doing the work—no bloated layers, no hand-offs.
@@ -194,16 +211,16 @@
             "
             sizes="(min-width: 1024px) 38vw, 100vw"
             width="1200" height="1500" loading="lazy" decoding="async"
-            alt="Founder working with client notes and analytics on screen" />
+            alt="Founder collaborating with client notes and analytics dashboard" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section">
+  <section class="section" aria-labelledby="faq-heading">
     <div class="container">
-      <h2>FAQ</h2>
+      <h2 id="faq-heading">FAQ</h2>
       <details>
         <summary>Who is this for?</summary>
         <p>Founders and lean teams who want compounding growth without gimmicks.</p>
@@ -214,7 +231,7 @@
       </details>
       <details>
         <summary>How fast will we see results?</summary>
-        <p>Paid channels: 2–4 weeks. SEO & email: 6–12 weeks to consistent lift, compounding after.</p>
+        <p>Paid channels: 2–4 weeks. SEO &amp; email: 6–12 weeks to consistent lift, compounding after.</p>
       </details>
       <details>
         <summary>What do you need from us?</summary>
@@ -222,15 +239,15 @@
       </details>
       <details>
         <summary>Can we start with a small project first?</summary>
-        <p>Yes—book a 2-week strategy sprint; fee is credited toward a retainer if we continue.</p>
+        <p>Yes—book a 2-week strategy sprint; the fee is credited toward a retainer if we continue.</p>
       </details>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="section section-sand">
+  <section class="section section-sand" aria-labelledby="cta-heading">
     <div class="container center narrow">
-      <h2>Ready to grow—calmly?</h2>
+      <h2 id="cta-heading">Ready to grow—calmly?</h2>
       <p class="lead">Tell us your goals. We’ll send a short plan with options and transparent pricing.</p>
       <div class="actions" style="justify-content:center">
         <a href="contact.html" class="btn btn-green">Get a free growth plan</a>
@@ -240,7 +257,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer">
       <p>© <span id="year"></span> Natural Edge Media</p>
       <nav aria-label="Footer">
@@ -249,18 +266,20 @@
     </div>
   </footer>
 
-  <!-- Schema -->
+  <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Natural Edge Media",
     "url": "https://my-website.vercel.app/",
-    "description": "Research-backed strategy and clean creative that compounds growth.",
+    "description": "Research-backed strategy and creative direction across SEO, social, email, and ads.",
     "logo": "https://my-website.vercel.app/favicon.png",
     "sameAs": []
   }
   </script>
+
+  <!-- JSON-LD: Person (Founder) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -272,6 +291,35 @@
   }
   </script>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <!-- JSON-LD: Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://my-website.vercel.app/"},
+      {"@type":"ListItem","position":2,"name":"About","item":"https://my-website.vercel.app/about.html"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage (matches on-page FAQ) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Who is this for?","acceptedAnswer":{"@type":"Answer","text":"Founders and lean teams who want compounding growth without gimmicks."}},
+      {"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"Most retainers land $1.2k–$3.5k/mo depending on scope. Fixed-fee strategy sprints are available."}},
+      {"@type":"Question","name":"How fast will we see results?","acceptedAnswer":{"@type":"Answer","text":"Paid channels: 2–4 weeks. SEO & email: 6–12 weeks to consistent lift, with compounding after."}},
+      {"@type":"Question","name":"What do you need from us?","acceptedAnswer":{"@type":"Answer","text":"Access to analytics/ads/ESP, brand guidelines, and one async check-in per week."}},
+      {"@type":"Question","name":"Can we start with a small project first?","acceptedAnswer":{"@type":"Answer","text":"Yes—book a 2-week strategy sprint; the fee is credited toward a retainer if we continue."}}
+    ]
+  }
+  </script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
