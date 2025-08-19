@@ -3,11 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Natural Edge Media — Contact</title>
-  <meta name="description" content="Contact Natural Edge Media for a strategy call and tailored next steps." />
-  <link rel="stylesheet" href="styles.css" />
+
+  <title>Contact | Natural Edge Media — Start a Project</title>
+  <meta name="description" content="Tell us about your brand and goals. We’ll reply within one business day with next steps and a simple plan." />
+  <link rel="canonical" href="https://my-website.vercel.app/contact.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Natural Edge Media" />
+  <meta property="og:description" content="Reply within one business day. Clear next steps and a simple plan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://my-website.vercel.app/contact.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80" />
+  <meta property="og:image:alt" content="Warm workspace with notebook and laptop" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="styles.css?v=12" />
+
+  <style>
+    /* Layout helpers (keeps your theme) */
+    .split { display:grid; grid-template-columns: 1.1fr .9fr; gap:2rem; align-items:start; }
+    @media (max-width: 980px){ .split{ grid-template-columns: 1fr; } }
+    .panel { background:#fff; border:1px solid #eee; border-radius:14px; box-shadow:0 12px 28px rgba(0,0,0,.06); }
+    .pad { padding:1rem; } .pad-lg{ padding:1.25rem; }
+    .muted { opacity:.75; } .help { opacity:.85; font-size:.95rem; }
+    .cta-inline{ display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin-top:.8rem; }
+
+    /* Form */
+    form .row { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; }
+    @media (max-width: 700px){ form .row{ grid-template-columns: 1fr; } }
+    .field { margin-bottom:.9rem; }
+    .field label { display:block; font-weight:600; margin:0 0 .35rem; }
+    .field input, .field select, .field textarea {
+      width:100%; border:1px solid #ddd; border-radius:10px; padding:.7rem .8rem; background:#fff;
+    }
+    .checkset { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; }
+    @media (max-width: 700px){ .checkset{ grid-template-columns:1fr; } }
+    .consent { display:flex; gap:.5rem; align-items:flex-start; margin:.2rem 0 .6rem; }
+    .status { margin-top:.75rem; }
+    .success, .error { display:none; padding:.8rem; border-radius:10px; }
+    .success { background:#eef7ee; color:#1f5a28; }
+    .error { background:#ffecec; color:#7a1c1c; }
+    .visually-hidden{ position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; border:0; padding:0; margin:-1px; }
+    /* Honeypot */
+    .hp-wrap { position:absolute; left:-5000px; }
+  </style>
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header">
       <a class="brand" href="index.html">Natural Edge <span>Media</span></a>
@@ -17,35 +59,240 @@
           <li><a href="about.html">Why Us</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a class="btn btn-small active" href="contact.html">Contact</a></li>
+          <li><a class="active btn btn-small" href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="section section-cloud">
-    <div class="container narrow">
-      <h1 class="center">Let’s Work Together</h1>
-      <p class="lead center">Tell us about your brand and goals. We’ll reply with tailored next steps.</p>
-
-      <!-- Replace YOUR_FORM_ID with your Formspree ID -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="_replyto" placeholder="Your Email" required />
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+  <!-- Hero -->
+  <section class="section section-sand">
+    <div class="container center narrow">
+      <h1>Let’s Work Together</h1>
+      <p class="lead">Tell us about your brand and goals. We’ll reply within <strong>one business day</strong> with next steps.</p>
+      <div class="cta-inline">
+        <a class="btn btn-green" href="#form">Start the form</a>
+        <a class="btn btn-outline" href="https://calendly.com/naturaledgebackup/15-minute-discovery-call" target="_blank" rel="noopener">
+          Book a 15-min discovery call
+        </a>
+      </div>
+      <p class="muted" style="margin-top:.5rem">
+        Prefer email? Write us at <a href="mailto:hello@naturaledgemedia.com">hello@naturaledgemedia.com</a>.
+      </p>
     </div>
   </section>
 
+  <!-- Form + Sidebar -->
+  <section class="section">
+    <div class="container split">
+      <!-- FORM -->
+      <div class="panel" id="form">
+        <div class="pad-lg">
+          <!-- Replace the action URL with your Formspree endpoint -->
+          <form id="contactForm" action="https://formspree.io/f/your-id-here" method="POST" novalidate>
+            <!-- Honeypot (anti-spam) -->
+            <div class="hp-wrap" aria-hidden="true">
+              <label>Leave this field empty</label>
+              <input type="text" name="company_website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="name">Your Name</label>
+                <input id="name" name="name" type="text" required placeholder="Jane Doe" />
+              </div>
+              <div class="field">
+                <label for="email">Your Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@company.com" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="company">Company (optional)</label>
+                <input id="company" name="company" type="text" placeholder="Acme Co." />
+              </div>
+              <div class="field">
+                <label for="website">Website (optional)</label>
+                <input id="website" name="website" type="url" placeholder="https://example.com" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label>What do you need? <span class="muted">(pick all that fit)</span></label>
+              <div class="checkset">
+                <label><input type="checkbox" name="services" value="SEO"> SEO content</label>
+                <label><input type="checkbox" name="services" value="Social"> Social posts</label>
+                <label><input type="checkbox" name="services" value="Email"> Email flows</label>
+                <label><input type="checkbox" name="services" value="Ads"> Paid ads</label>
+                <label><input type="checkbox" name="services" value="Strategy"> Full-funnel plan</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="budget">Approx. monthly budget</label>
+                <select id="budget" name="budget" required>
+                  <option value="" disabled selected>Select a range</option>
+                  <option value="1000-2000">$1,000–$2,000</option>
+                  <option value="2000-3500">$2,000–$3,500</option>
+                  <option value="3500-6000">$3,500–$6,000</option>
+                  <option value="6000-plus">$6,000+</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="timeline">Ideal start</label>
+                <select id="timeline" name="timeline" required>
+                  <option value="" disabled selected>Select a timeline</option>
+                  <option value="asap">ASAP (this month)</option>
+                  <option value="30-45">30–45 days</option>
+                  <option value="60-plus">60+ days</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="6" required placeholder="Tell us about your goals, audience, and what a win looks like."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="hear">How did you hear about us? <span class="muted">(optional)</span></label>
+              <input id="hear" name="hear" type="text" placeholder="Referral, Google, TikTok, etc." />
+            </div>
+
+            <div class="consent">
+              <input id="consent" name="consent" type="checkbox" value="yes" required />
+              <label for="consent">I agree to be contacted about my inquiry and understand this form stores my details so we can reply.</label>
+            </div>
+
+            <button class="btn btn-green" type="submit" id="submitBtn">Send Message</button>
+
+            <div class="status" aria-live="polite">
+              <div class="success" id="successMsg">Thanks! We’ve got your message. We’ll reply within one business day.</div>
+              <div class="error" id="errorMsg">Something went wrong. Please try again or email <a href="mailto:hello@naturaledgemedia.com">hello@naturaledgemedia.com</a>.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="panel">
+        <div class="pad-lg">
+          <h2>What happens next</h2>
+          <ol class="bullets">
+            <li>We’ll review your note and follow up within one business day.</li>
+            <li>We’ll share a short plan with options and transparent pricing.</li>
+            <li>If it’s a fit, we’ll book a kickoff and get moving.</li>
+          </ol>
+
+          <h3 style="margin-top:1rem">Prefer a quick call?</h3>
+          <p class="help">Grab a spot on our calendar:</p>
+          <p><a class="btn btn-outline" href="https://calendly.com/naturaledgebackup/15-minute-discovery-call" target="_blank" rel="noopener">Book a 15-min discovery call</a></p>
+
+          <p class="muted" style="margin-top:1rem">Need to share files or more context? Email us anytime at <a href="mailto:hello@naturaledgemedia.com">hello@naturaledgemedia.com</a>.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer">
       <p>© <span id="year"></span> Natural Edge Media</p>
       <nav aria-label="Footer">
-        <a href="services.html">Services</a> · <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a> · <a href="portfolio.html">Portfolio</a> · <a href="contact.html">Contact</a>
       </nav>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ContactPage",
+    "name":"Contact — Natural Edge Media",
+    "url":"https://my-website.vercel.app/contact.html",
+    "mainEntity":{
+      "@type":"Organization",
+      "name":"Natural Edge Media",
+      "url":"https://my-website.vercel.app/",
+      "email":"hello@naturaledgemedia.com"
+    }
+  }
+  </script>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Client-side validation + AJAX submit (Formspree)
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg = document.getElementById('errorMsg');
+
+    function validEmail(email){
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Honeypot: if filled, silently succeed (block bots)
+      if (form.querySelector('input[name="company_website"]').value.trim() !== '') {
+        successMsg.style.display = 'block';
+        errorMsg.style.display = 'none';
+        form.reset();
+        return;
+      }
+
+      // Basic checks
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const budget = form.budget.value;
+      const timeline = form.timeline.value;
+      const message = form.message.value.trim();
+      const consent = form.consent.checked;
+
+      if (!name || !validEmail(email) || !budget || !timeline || !message || !consent) {
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'block';
+        errorMsg.textContent = 'Please complete the required fields.';
+        return;
+      }
+
+      // Submit
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      try {
+        // IMPORTANT: Replace with your real Formspree endpoint
+        const endpoint = form.getAttribute('action'); // e.g., https://formspree.io/f/xxxxxxx
+        const data = new FormData(form);
+
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+
+        if (res.ok) {
+          successMsg.style.display = 'block';
+          errorMsg.style.display = 'none';
+          form.reset();
+        } else {
+          throw new Error('Network error');
+        }
+      } catch (err) {
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'block';
+        errorMsg.innerHTML = 'Something went wrong. Please try again or email <a href="mailto:hello@naturaledgemedia.com">hello@naturaledgemedia.com</a>.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
+    });
+  </script>
 </body>
 </html>
